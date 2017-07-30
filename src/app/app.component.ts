@@ -12,8 +12,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 })
 export class MyApp {
 	private token = localStorage.getItem('token');
+	
 	rootPage: any = (this.token)?HomePage:LoginPage;
 	constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
+		console.log(this.token)
 		platform.ready().then(() => {
 			// Okay, so the platform is ready and our plugins are available.
 			// Here you can do any higher level native things you might need.

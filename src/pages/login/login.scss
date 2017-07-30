@@ -4,8 +4,8 @@ page-login {}
   height: 100vh;
   background: url('../assets/login-bg.jpg') no-repeat;
   background-size: cover;
-  .scroll-content{
-      overflow: hidden;
+  .scroll-content {
+    overflow: hidden;
   }
   .login-content {
     position: absolute;
@@ -25,8 +25,18 @@ page-login {}
     .label-ios {
       color: #fff;
     }
-    .text-input-ios{
-        color: #fff;
+    .text-input-ios {
+      color: #fff;
     }
+  }
+  .copyright {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 0;
+      text-align:center;
+      color: #fff;
   }
 }
