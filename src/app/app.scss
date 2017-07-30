@@ -1,6 +1,4 @@
 // http://ionicframework.com/docs/theming/
-
-
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These
@@ -14,3 +12,65 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+/*font-black*/
+
+$black-100:#333;
+$black-50:#666;
+$black-25:#999;
+$black-10:#ddd;
+
+/*font-blue*/
+
+$blue-100:#488aff;
+
+/*border-color*/
+
+$border-100:#ddd;
+.list {
+    border: none;
+    margin: 0;
+    font-size: 14px;
+    .label-ios {
+        margin: 0;
+        min-width: 80px;
+        height: 44px;
+        line-height: 44px;
+    }
+}
+
+.list-ios {
+    .item-block {
+        min-height: 0;
+    }
+    >.item-block:first-child {
+        border-top: none;
+    }
+    >.item-block:last-child {
+        border-bottom: none;
+    }
+    .item-ios {
+        padding: 0;
+        font-size: 14px;
+    }
+}
+
+.item {
+    border-bottom: 1px solid $border-100;
+    .text-input-ios {
+        height: 44px;
+        line-height: 44px;
+        margin: 0;
+    }
+}
+
+.button {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    span {
+        flex: 1;
+        width: 100%;
+        line-height: 44px;
+    }
+}
