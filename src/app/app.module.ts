@@ -17,10 +17,17 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 	],
 	imports: [
 		BrowserModule,
-		IonicModule.forRoot(MyApp),
+		IonicModule.forRoot(MyApp,{
+			backButtonText: '',
+			iconMode: 'ios',
+			modalEnter: 'modal-slide-in',
+			modalLeave: 'modal-slide-out',
+			tabsPlacement: 'bottom',
+			pageTransition: 'ios-transition'
+		}),
 		RestangularModule.forRoot((RestangularProvider) => {
 			RestangularProvider.setBaseUrl('test/app');
-			RestangularProvider.setDefaultHeaders({ 'Authorization': 'Bearer UDXPx-Xko0w4BRKajozCVy20X11MRZs1' });
+			RestangularProvider.setDefaultHeaders({ 'AuthToken': 'Bearer UDXPx-Xko0w4BRKajozCVy20X11MRZs1' });
 		})
 	],
 	bootstrap: [IonicApp],
