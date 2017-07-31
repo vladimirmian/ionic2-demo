@@ -27,7 +27,7 @@ export class LoginPage {
 			this.CommonStore.login(this.loginParams).subscribe((res) => {
 				if (res.status == 200) {
 					RestangularModule.forRoot((RestangularProvider)=>{
-						RestangularProvider.setDefaultHeaders({'Authorization': res.data.token});
+						RestangularProvider.setDefaultHeaders({'AuthToken': res.data.token});
 					});
 					localStorage.setItem('token', res.data.token);
 					this.navCtrl.push(HomePage)
