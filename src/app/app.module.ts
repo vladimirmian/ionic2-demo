@@ -8,7 +8,7 @@ import { HomePage } from '../pages/home/home';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
+let AuthToken = localStorage.getItem('token');
 @NgModule({
 	declarations: [
 		MyApp,
@@ -17,7 +17,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 	],
 	imports: [
 		BrowserModule,
-		IonicModule.forRoot(MyApp,{
+		IonicModule.forRoot(MyApp, {
 			backButtonText: '',
 			iconMode: 'ios',
 			modalEnter: 'modal-slide-in',
@@ -27,7 +27,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 		}),
 		RestangularModule.forRoot((RestangularProvider) => {
 			RestangularProvider.setBaseUrl('test/app');
-			RestangularProvider.setDefaultHeaders({ 'AuthToken': 'Bearer UDXPx-Xko0w4BRKajozCVy20X11MRZs1' });
+			RestangularProvider.setDefaultHeaders({ 'AuthToken': AuthToken });
 		})
 	],
 	bootstrap: [IonicApp],
@@ -42,4 +42,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 		{ provide: ErrorHandler, useClass: IonicErrorHandler }
 	]
 })
-export class AppModule { }
+export class AppModule {
+	constructor() {
+		console.log('i am running');
+	}
+}

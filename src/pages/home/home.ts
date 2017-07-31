@@ -6,10 +6,8 @@ import { NavController } from 'ionic-angular';
 	templateUrl: 'home.html'
 })
 export class HomePage {
-	private token = localStorage.getItem('token');
 	rootPage: any = HomePage;
+		// location.reload();
 	constructor(public navCtrl: NavController) {
-
 	}
-
 }

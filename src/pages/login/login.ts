@@ -1,10 +1,10 @@
+import { RestangularModule } from 'ngx-restangular';
 import { TipService } from './../../service/tips';
 import { HomePage } from './../home/home';
 import { CommonStore } from './../../store/common.store';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { NgForm } from "@angular/forms";
-
 @Component({
 	providers: [CommonStore, TipService],
 	selector: 'page-login',
@@ -17,7 +17,7 @@ export class LoginPage {
 		passWord: ""//密码
 	}
 	constructor(public navCtrl: NavController, private CommonStore: CommonStore, private tips: TipService) {
-
+		// RestangularModule.forRoot
 	}
 	login(loginForm: NgForm) {
 		console.log(loginForm.invalid)
@@ -26,11 +26,13 @@ export class LoginPage {
 		} else {
 			this.CommonStore.login(this.loginParams).subscribe((res) => {
 				if (res.status == 200) {
-					console.log('login success')
+					RestangularModule.forRoot((RestangularProvider)=>{
+						RestangularProvider.setDefaultHeaders({'Authorization': res.data.token});
+					});
 					localStorage.setItem('token', res.data.token);
 					this.navCtrl.push(HomePage)
 				} else {
-					console.log('login fail')
+					this.tips.presentAlert('',res.msg);
 				}
 			});
 		}
