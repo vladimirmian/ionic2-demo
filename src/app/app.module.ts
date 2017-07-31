@@ -1,3 +1,4 @@
+import { AboutPage } from './../pages/about/about';
 import { LoginPage } from './../pages/login/login';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -5,7 +6,7 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { RestangularModule } from 'ngx-restangular';
 import { HomePage } from '../pages/home/home';
-
+import { IonicPageModule } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 let AuthToken = localStorage.getItem('token');
@@ -13,7 +14,8 @@ let AuthToken = localStorage.getItem('token');
 	declarations: [
 		MyApp,
 		HomePage,
-		LoginPage
+		LoginPage,
+		AboutPage
 	],
 	imports: [
 		BrowserModule,
@@ -34,7 +36,8 @@ let AuthToken = localStorage.getItem('token');
 	entryComponents: [
 		MyApp,
 		HomePage,
-		LoginPage
+		LoginPage,
+		AboutPage
 	],
 	providers: [
 		StatusBar,
