@@ -7,7 +7,7 @@
         <div><img src="assets/icon/user.png" alt=""></div>
     </div>
     <div class="main-slide-panel">
-        <ion-slides loop="true">
+        <ion-slides loop="true" autoplay="true">
             <ion-slide *ngFor="let image of [1,2,3,4]">
                 <img data-src="./assets/banner/banner-{{image}}.jpg" height="100">
             </ion-slide>
@@ -35,20 +35,20 @@
     </div>
     <div class="product-block">
         <div class="airplane">
-            <img src="assets/icon/Airplane-main.png" alt="">
+            <img src="assets/icon/purchase_order.png" alt="">
             <p>出差申请</p>
         </div>
         <div class="other-product">
             <div>
-                <img src="assets/icon/hotel-main.png" alt="">
+                <img src="assets/icon/dispatch_order_zoom.png" alt="">
                 <p>我的申请</p>
             </div>
             <div>
-                <img src="assets/icon/Train-main.png" alt="">
+                <img src="assets/icon/dispatch_order_clock.png" alt="">
                 <p>待我审批</p>
             </div>
             <div>
-                <img src="assets/icon/ticket-main.png" alt="">
+                <img src="assets/icon/dispatch_order_checkmark.png" alt="">
                 <p>查看订单</p>
             </div>
         </div>

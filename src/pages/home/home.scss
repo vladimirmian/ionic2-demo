@@ -1,4 +1,9 @@
-page-home {}
+page-home {
+    min-height: 100vh;
+    .scroll-content {
+        overflow: hidden;
+    }
+}
 
 .main-panel {
     .user-center {
