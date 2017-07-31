@@ -25,12 +25,8 @@ page-home {
             p {
                 margin: 0;
             }
-            img {
-                display: inline-block;
-                vertical-align: middle;
-                width: 30px;
-                height: auto;
-                object-fit: cover;
+            i {
+                font-size: 18px;
             }
         }
     }
@@ -48,21 +44,20 @@ page-home {
             flex: 1;
             height: 180px;
             text-align: center;
+            color: #666;
             p {
                 font-size: 16px;
                 color: #333;
             }
         }
         .airplane {
-            img {
-                display: inline-block;
-                width: 100px;
-                height: auto;
-                margin-top: 16px;
-                object-fit: cover;
-            }
             border-right: 1px solid #ddd;
             border-bottom: 1px solid #ddd;
+            i {
+                display: block;
+                margin: 24px 0;
+                font-size: 80px;
+            }
         }
         .other-product {
             font-size: 0;
@@ -72,17 +67,22 @@ page-home {
                 padding: 0 15px;
                 border-bottom: 1px solid #ddd;
             }
-            img,
+            i,
             p {
                 display: inline-block;
                 vertical-align: middle;
             }
-            img {
-                width: 20px;
-                height: auto;
+            i {
                 margin-right: 10px;
-                object-fit: cover;
             }
         }
+    }
+    .copyright {
+        position: absolute;
+        bottom: 10px;
+        color: #666;
+        width: 100%;
+        margin: 0;
+        text-align: center;
     }
 }
