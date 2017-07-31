@@ -1,8 +1,8 @@
 <ion-content class="main-panel">
     <div class="user-center">
-        <div><i class="iconfont icon-menu"></i></div>
+        <div><i class="iconfont icon-menu" (click)="showUserInfo = true"></i></div>
         <div>
-            <p>欢迎回来，Martin</p>
+            <p>欢迎回来，{{userInfo.userCnName.firstName + userInfo.userCnName.lastName}}</p>
         </div>
         <div><i class="iconfont icon-message-o"></i></div>
     </div>
@@ -53,18 +53,20 @@
             </div>
         </div>
     </div>
-    <div class="bg-cover" *ngIf="false">
-        <div class="user-center-control">
+    <div class="bg-cover" *ngIf="showUserInfo">
+        <div class="user-center-control animated" [ngClass]="{'fadeInLeft':showUserInfo,'fadeOutLeft':!showUserInfo}">
+            <i class="iconfont icon-error close-user-contrl" (click)="showUserInfo = false"></i>
             <div class="user-avatar">
-                <div class="avatar"><i class="iconfont icon-personal-o"></i></div>
+                <div class="avatar"><i class="iconfont icon-userinfo-o"></i></div>
                 <div class="user-info">
-                    <span>Martin.Chien</span>
-                    <span>一起去嘿嘿嘿</span>
+                    <span>{{userInfo.userCnName.firstName + userInfo.userCnName.lastName}}</span>
+                    <span>{{userInfo.departmentName}}</span>
                 </div>
             </div>
             <div class="user-menu-list">
                 <span><i class="iconfont icon-userinfo-o"></i>个人资料</span>
                 <span><i class="iconfont icon-lock-o"></i>修改密码</span>
+                <span><i class="iconfont icon-unlock-o"></i>找回密码</span>
             </div>
             <div class="logout">
                 退出登录
