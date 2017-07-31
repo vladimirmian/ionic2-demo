@@ -1,15 +1,83 @@
 page-home {}
 
 .main-panel {
+    .user-center {
+        display: flex;
+        height: 40px;
+        padding: 0 15px;
+        >div {
+            flex: 1;
+            align-items: center;
+            width: 100%;
+            line-height: 40px;
+            text-align: center;
+            &:first-child {
+                text-align: left;
+            }
+            &:last-child {
+                text-align: right;
+            }
+            p {
+                margin: 0;
+            }
+            img {
+                display: inline-block;
+                vertical-align: middle;
+                width: 30px;
+                height: auto;
+                object-fit: cover;
+            }
+        }
+    }
     .main-slide-panel {
         width: 100%;
         height: 200px;
-        .slide-zoom {
-            // height: 100px;
-        }
         img {
             height: 200px;
             object-fit: cover;
+        }
+    }
+    .product-block {
+        display: flex;
+        >div {
+            flex: 1;
+            height: 180px;
+            text-align: center;
+            p {
+                font-size: 16px;
+                color: #333;
+            }
+        }
+        .airplane {
+            img {
+                display: inline-block;
+                width: 100px;
+                height: auto;
+                margin-top: 16px;
+                object-fit: cover;
+            }
+            border-right: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+        }
+        .other-product {
+            font-size: 0;
+            text-align: left;
+            >div {
+                height: 33.333%;
+                padding: 0 15px;
+                border-bottom: 1px solid #ddd;
+            }
+            img,
+            p {
+                display: inline-block;
+                vertical-align: middle;
+            }
+            img {
+                width: 20px;
+                height: auto;
+                margin-right: 10px;
+                object-fit: cover;
+            }
         }
     }
 }
