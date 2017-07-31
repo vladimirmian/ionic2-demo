@@ -1,36 +1,21 @@
 <ion-content>
     <div class="login-panel">
-        <form class="login-content" novalidate autocomplete="false">
+        <form class="login-content" #loginForm="ngForm" novalidate autocomplete="false">
             <div class="list list-ios">
                 <div class="item item-ios item-block item-input">
                     <label class="label label-ios">企业号</label>
-                    <input type="text" 
-                    name="companyname" 
-                    class="text-input text-input-ios" 
-                    [(ngModel)]="loginParams.companyNum"
-                    #companyname="ngModel"
-                    placeholder="请填写企业号" required>
+                    <input type="text" name="companyname" class="text-input text-input-ios" [(ngModel)]="loginParams.companyNum" #companyname="ngModel" placeholder="请填写企业号" required>
                 </div>
                 <div class="item item-ios item-block item-input">
                     <label class="label label-ios">登录名</label>
-                    <input type="text" 
-                    name="username" 
-                    class="text-input text-input-ios" 
-                    [(ngModel)]="loginParams.userName"
-                    #username="ngModel"
-                    placeholder="请填写登录账号" required>
+                    <input type="text" name="username" class="text-input text-input-ios" [(ngModel)]="loginParams.userName" #username="ngModel" placeholder="请填写登录账号" required>
                 </div>
                 <div class="item item-ios item-block item-input">
                     <label class="label label-ios">密码</label>
-                    <input type="password" 
-                    name="passWord" 
-                    class="text-input text-input-ios"  
-                    [(ngModel)]="loginParams.passWord"
-                    #passWord="ngModel"
-                    placeholder="请填写密码">
+                    <input type="password" name="passWord" class="text-input text-input-ios" [(ngModel)]="loginParams.passWord" #passWord="ngModel" placeholder="请填写密码">
                 </div>
             </div>
-            <div class="button button-ios" (click)="login()"><span>登录</span></div>
+            <div class="button button-ios" (click)="login(loginForm)"><span>登录</span></div>
         </form>
         <p class="copyright">Copyright©2017 author by Martin.Chien</p>
         <!-- <ion-list>
