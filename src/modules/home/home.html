@@ -1,0 +1,77 @@
+<ion-content class="main-panel">
+    <div class="user-center">
+        <div><i class="iconfont icon-menu" (click)="showUserInfo = true"></i></div>
+        <div>
+            <p>欢迎回来，{{userInfo.userCnName.firstName + userInfo.userCnName.lastName}}</p>
+        </div>
+        <div><i class="iconfont icon-message-o"></i></div>
+    </div>
+    <div class="main-slide-panel">
+        <ion-slides loop="true" autoplay="true">
+            <ion-slide *ngFor="let image of [1,2,3,4]">
+                <img data-src="./assets/banner/banner-{{image}}.jpg" height="100">
+            </ion-slide>
+        </ion-slides>
+    </div>
+    <div class="product-block">
+        <div class="airplane" (click)="gotoabout()">
+            <i class="iconfont icon-international-plane-"></i>
+            <p>打飞的</p>
+        </div>
+        <div class="other-product">
+            <div>
+                <i class="iconfont icon-hotel-o"></i>
+                <p>去开房</p>
+            </div>
+            <div>
+                <i class="iconfont icon-train-o"></i>
+                <p>火车票</p>
+            </div>
+            <div>
+                <i class="iconfont icon-coupon"></i>
+                <p>订门票</p>
+            </div>
+        </div>
+    </div>
+    <div class="product-block">
+        <div class="airplane">
+            <i class="iconfont icon-file-o"></i>
+            <p>出差申请</p>
+        </div>
+        <div class="other-product">
+            <div>
+                <i class="iconfont icon-payment-b-o"></i>
+                <p>我的申请</p>
+            </div>
+            <div>
+                <i class="iconfont icon-bill-o"></i>
+                <p>待我审批</p>
+            </div>
+            <div>
+                <i class="iconfont icon-order-o"></i>
+                <p>查看订单</p>
+            </div>
+        </div>
+    </div>
+    <div class="bg-cover" *ngIf="showUserInfo">
+        <div class="user-center-control animated" [ngClass]="{'fadeInLeft':showUserInfo,'fadeOutLeft':!showUserInfo}">
+            <i class="iconfont icon-error close-user-contrl" (click)="showUserInfo = false"></i>
+            <div class="user-avatar">
+                <div class="avatar"><i class="iconfont icon-userinfo-o"></i></div>
+                <div class="user-info">
+                    <span>{{userInfo.userCnName.firstName + userInfo.userCnName.lastName}}</span>
+                    <span>{{userInfo.departmentName}}</span>
+                </div>
+            </div>
+            <div class="user-menu-list">
+                <span><i class="iconfont icon-userinfo-o"></i>个人资料</span>
+                <span><i class="iconfont icon-lock-o"></i>修改密码</span>
+                <span><i class="iconfont icon-unlock-o"></i>找回密码</span>
+            </div>
+            <div class="logout">
+                退出登录
+            </div>
+        </div>
+    </div>
+    <p class="copyright">Copyright©2017 author by Martin.Chien</p>
+</ion-content>
