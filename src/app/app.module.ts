@@ -1,5 +1,4 @@
 import { HomePage } from './../pages/home/home';
-import { AboutPage } from './../pages/about/about';
 import { LoginPage } from './../pages/login/login';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -14,7 +13,6 @@ let AuthToken = localStorage.getItem('token');
 		MyApp,
 		HomePage,
 		LoginPage,
-		AboutPage
 	],
 	imports: [
 		BrowserModule,
@@ -37,7 +35,6 @@ let AuthToken = localStorage.getItem('token');
 		MyApp,
 		HomePage,
 		LoginPage,
-		AboutPage
 	],
 	providers: [
 		StatusBar,
