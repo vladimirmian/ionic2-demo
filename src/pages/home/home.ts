@@ -30,6 +30,6 @@ export class HomePage implements OnInit {
 	}
 	gotoabout(){
 		console.log('sss')
-		this.navCtrl.push('inquire');
+		this.navCtrl.push('inquire-page');
 	}
 }

@@ -1,8 +1,8 @@
 import { IonicPage, NavController } from 'ionic-angular';
 import { Component } from '@angular/core';
 @IonicPage({
-    name:"inquire",
-    segment:"inquire"
+  name: 'inquire-page',
+  segment: 'inquire'
 })
 @Component({
     selector:'page-inquire',
