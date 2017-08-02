@@ -1,3 +1,4 @@
+import { HomePage } from './../home/home';
 import { RestangularModule } from 'ngx-restangular';
 import { TipService } from './../../service/tips';
 import { CommonStore } from './../../store/common.store';
@@ -29,7 +30,7 @@ export class LoginPage {
 						RestangularProvider.setDefaultHeaders({'AuthToken': res.data.token});
 					});
 					localStorage.setItem('token', res.data.token);
-					this.navCtrl.push('home')
+					this.navCtrl.push(HomePage)
 				} else {
 					this.tips.presentAlert('',res.msg);
 				}

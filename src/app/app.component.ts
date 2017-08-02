@@ -1,3 +1,4 @@
+import { HomePage } from './../pages/home/home';
 import { LoginPage } from './../pages/login/login';
 import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
@@ -11,8 +12,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 })
 export class MyApp {
 	private token = localStorage.getItem('token');
-	
-	rootPage: any =LoginPage;
+	rootPage: any =this.token?HomePage:LoginPage;
 	constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
 		console.log(this.token)
 		platform.ready().then(() => {

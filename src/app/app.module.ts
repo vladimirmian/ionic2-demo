@@ -1,3 +1,4 @@
+import { HomePage } from './../pages/home/home';
 import { AboutPage } from './../pages/about/about';
 import { LoginPage } from './../pages/login/login';
 import { NgModule, ErrorHandler } from '@angular/core';
@@ -11,6 +12,7 @@ let AuthToken = localStorage.getItem('token');
 @NgModule({
 	declarations: [
 		MyApp,
+		HomePage,
 		LoginPage,
 		AboutPage
 	],
@@ -33,6 +35,7 @@ let AuthToken = localStorage.getItem('token');
 	bootstrap: [IonicApp],
 	entryComponents: [
 		MyApp,
+		HomePage,
 		LoginPage,
 		AboutPage
 	],
