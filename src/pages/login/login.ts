@@ -1,6 +1,5 @@
 import { RestangularModule } from 'ngx-restangular';
 import { TipService } from './../../service/tips';
-import { HomePage } from './../home/home';
 import { CommonStore } from './../../store/common.store';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
@@ -12,7 +11,7 @@ import { NgForm } from "@angular/forms";
 })
 export class LoginPage {
 	private loginParams: object = {
-		companyNum: "",//企业编号
+		companyNum: "001175",//企业编号
 		userName: "",//用户名,
 		passWord: ""//密码
 	}
@@ -30,7 +29,7 @@ export class LoginPage {
 						RestangularProvider.setDefaultHeaders({'AuthToken': res.data.token});
 					});
 					localStorage.setItem('token', res.data.token);
-					this.navCtrl.push(HomePage)
+					this.navCtrl.push('home')
 				} else {
 					this.tips.presentAlert('',res.msg);
 				}

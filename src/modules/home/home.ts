@@ -2,8 +2,12 @@ import { CustantService } from './../../service/custant.service';
 import { TipService } from './../../service/tips';
 import { CommonStore } from './../../store/common.store';
 import { Component, OnInit } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController ,IonicPage} from 'ionic-angular';
 import {userinfo} from './../../interface/userInfo.interface';
+@IonicPage({
+	name:"home",
+	segment:"home"
+})
 @Component({
 	providers: [CommonStore, TipService, CustantService],
 	selector: 'page-home',
