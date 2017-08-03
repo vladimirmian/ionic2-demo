@@ -13,21 +13,10 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 @import './iconfont.scss';
-
-/*font-black*/
-
-$black-100:#333;
-$black-50:#666;
-$black-25:#999;
-$black-10:#ddd;
-
-/*font-blue*/
-
-$blue-100:#488aff;
-
-/*border-color*/
-
-$border-100:#ddd;
+@import './_var.scss';
+.scroll-content{
+    background-color: #f2f2f2;
+}
 .list {
     border: none;
     margin: 0;

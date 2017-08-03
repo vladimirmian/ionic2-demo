@@ -1,3 +1,6 @@
 <ion-content class="domestic-content inquire-panel">
-    <h1>airplane</h1>
+    <div class="slide-way">
+        <div (click)="isOneWay = true"><span [ngClass]="{'active':isOneWay}">单程</span></div>
+        <div (click)="isOneWay = false"><span [ngClass]="{'active':!isOneWay}">往返</span></div>
+    </div>
 </ion-content>
