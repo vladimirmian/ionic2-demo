@@ -1,4 +1,6 @@
-import { HotelPage } from '../../pages/hotel/hotel';
+import { TrainPage } from './pages/Train/train';
+import { HotelPage } from './pages/hotel/hotel';
+import { InternationalPage } from './pages/International/international';
 import { DomesticPage } from './pages/Domestic/domestic';
 
 import { IonicPageModule, IonicModule } from 'ionic-angular';
@@ -7,19 +9,23 @@ import { NgModule } from '@angular/core';
 @NgModule({
     declarations: [
         InquirePage,
-        DomesticPage
+        DomesticPage,
+        InternationalPage,
+        HotelPage,
+        TrainPage
     ],
     imports: [
-        IonicModule.forRoot(InquirePage),
         IonicPageModule.forChild(InquirePage)
     ],
     entryComponents: [
         InquirePage,
-        DomesticPage
+        DomesticPage,
+        InternationalPage,
+        HotelPage,
+        TrainPage
     ]
 })
 export class InquireModule { 
     constructor(){
-        console.log('asdasda')
     }
 }

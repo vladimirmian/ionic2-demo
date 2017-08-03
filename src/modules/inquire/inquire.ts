@@ -1,3 +1,4 @@
+import { HotelPage } from './pages/hotel/hotel';
 import { TrainPage } from './pages/Train/train';
 import { InternationalPage } from './pages/International/international';
 import { DomesticPage } from './pages/Domestic/domestic';
@@ -13,15 +14,15 @@ import { Component } from '@angular/core';
     templateUrl: './inquire.html'
 })
 export class InquirePage {
-    
+    DomesticPage:any = DomesticPage;
+    HotelPage:any = HotelPage;
+    InternationalPage:any = InternationalPage;
+    TrainPage:any = TrainPage;
     constructor(public navCtrl: NavController, public viewCtrl: ViewController, public appCtrl: App) {
         // console.log(DomesticPage)
      }
     gotohome() {
         this.viewCtrl.dismiss();
         this.appCtrl.getRootNav().push(MyApp);
-    }
-    gotoHotel(){
-        this.navCtrl.push(DomesticPage)
     }
 }

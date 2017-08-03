@@ -7,7 +7,7 @@ import { NavController, IonicPage, ViewController, App } from 'ionic-angular';
 import { userinfo } from './../../interface/userInfo.interface';
 @IonicPage({
 	name: "home",
-	segment: ""
+	segment: "home"
 })
 @Component({
 	providers: [CommonStore, TipService, CustantService],
@@ -34,7 +34,6 @@ export class HomePage implements OnInit {
 		});
 	}
 	gotoabout() {
-		console.log('sss2222')
 		this.navCtrl.push('inquire-page');
 	}
 }
