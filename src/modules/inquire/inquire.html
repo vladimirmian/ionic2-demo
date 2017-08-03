@@ -1,6 +1,9 @@
-<ion-tabs>
-    <ion-tab [root]="DomesticPage"></ion-tab>
-    <ion-tab [root]="HotelPage"></ion-tab>
-    <ion-tab [root]="InternationalPage"></ion-tab>
-    <ion-tab [root]="TrainPage"></ion-tab>
+<ion-header>
+  <h1>dddd</h1>
+</ion-header>
+<ion-tabs [selectedIndex]="0">
+  <ion-tab [root]="DomesticPage" tabTitle="国内机票" tabIcon="home"></ion-tab>
+  <ion-tab [root]="HotelPage" tabTitle="酒店" tabIcon="home"></ion-tab>
+  <ion-tab [root]="InternationalPage" tabTitle="国际机票" tabIcon="home"></ion-tab>
+  <ion-tab [root]="TrainPage" tabTitle="火车票" tabIcon="home"></ion-tab>
 </ion-tabs>
