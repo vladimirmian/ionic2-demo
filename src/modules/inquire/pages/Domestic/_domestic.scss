@@ -1,26 +1,98 @@
 @import './../../../../app/_var.scss';
-inquire-domestic{}
-.domestic-content{
-    .slide-way{
+inquire-domestic {}
+
+@mixin flex-block {
+    display: flex;
+    line-height: 30px;
+    padding: 0 12px;
+    align-items: center;
+    span {
+        flex: 1;
+        display: inline-block;
+        width: 100%;
+        color: $black-25;
+        text-align: left;
+        &:last-child {
+            text-align: right;
+        }
+    }
+}
+
+.domestic-content {
+    .slide-way {
         display: flex;
         align-items: center;
         background-color: #fff;
-        div{
-            flex:1;
+        div {
+            flex: 1;
             text-align: center;
         }
-        span{
+        span {
             display: inline-block;
             padding: 0 16px;
             height: 44px;
-            line-height:44px;
+            line-height: 44px;
             text-align: center;
             font-size: 14px;
             color: $black-25;
-            &.active{
+            &.active {
                 color: $blue-100;
-                border-bottom:2px solid $blue-100;
+                border-bottom: 2px solid $blue-100;
             }
+        }
+    }
+    .airplane-search-content {
+        margin: 12px;
+        background-color: #fff;
+        border-radius: 6px;
+        .city-title {
+            display: flex;
+            width: 100%;
+            padding: 0 12px;
+            align-items: center;
+            line-height: 30px;
+            span {
+                flex: 1;
+                display: inline-block;
+                font-size: 12px;
+                color: $black-25;
+                text-align: left;
+                &:last-child {
+                    text-align: right;
+                }
+            }
+        }
+        .city-selector {
+            display: flex;
+            height: 40px;
+            align-items: center;
+            line-height: 40px;
+            margin: 0 12px;
+            border-bottom: 1px solid $border-100;
+            span {
+                flex: 2;
+                text-align: left;
+                font-size: 18px;
+                color: $black-25;
+                &:nth-child(2) {
+                    padding: 0;
+                    flex: 1;
+                    text-align: center;
+                    color: $blue-100;
+                    i {
+                        display: inline-block;
+                    }
+                }
+                &:last-child {
+                    text-align: right;
+                }
+            }
+        }
+        .trip-time-selector {
+            .time-header {
+                @include flex-block;
+            }
+            .time-body {}
         }
     }
 }
