@@ -23,6 +23,9 @@ import { NgModule } from '@angular/core';
         InternationalPage,
         HotelPage,
         TrainPage
+    ],
+    exports:[
+        IonicPageModule
     ]
 })
 export class InquireModule { 
