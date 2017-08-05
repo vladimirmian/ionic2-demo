@@ -12,3 +12,46 @@ $blue-100:#488aff;
 /*border-color*/
 
 $border-100:#ddd;
+
+/*mixin function*/
+
+@mixin inlineblock {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+/*pretty form*/
+
+.pretty-radio {
+    @include inlineblock;
+    position: relative;
+    line-height: 44px;
+    margin-right: 20px;
+    input {
+        position: absolute;
+        opacity: 0;
+        &:checked+span {
+            ion-icon {
+                background: $blue-100;
+            }
+        }
+    }
+    span {
+        @include inlineblock();
+        ion-icon {
+            @include inlineblock();
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 1px solid blue;
+            line-height: 20px;
+            text-align: center;
+            color: #fff;
+        }
+        b {
+            @include inlineblock();
+            font-weight: normal;
+        }
+    }
+}
