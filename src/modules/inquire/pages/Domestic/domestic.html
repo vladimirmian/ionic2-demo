@@ -47,5 +47,26 @@
                 </label>
             </div>
         </div>
+        <div class="add-tripperson">
+            <span>出行人</span>
+            <span>添加<ion-icon name="add-circle"></ion-icon></span>
+        </div>
+        <ion-list class="trip-person-list">
+            <ion-item-sliding #item>
+                <ion-item>
+                    <h2>111</h2>
+                    <p>222</p>
+                    <ion-note item-end>
+                        450121199311153313
+                    </ion-note>
+                </ion-item>
+                <ion-item-options>
+                    <button ion-button color="danger" (click)="delete(item)"><ion-icon name="trash"></ion-icon>Delete</button>
+                </ion-item-options>
+            </ion-item-sliding>
+        </ion-list>
+        <div class="submit-button">
+            <button ion-button block>查询</button>
+        </div>
     </div>
 </ion-content>

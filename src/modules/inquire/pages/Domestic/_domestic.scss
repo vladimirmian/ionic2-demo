@@ -81,6 +81,7 @@ inquire-domestic {}
                     color: $blue-100;
                     i {
                         display: inline-block;
+                        font-size: 26px;
                     }
                 }
                 &:last-child {
@@ -102,6 +103,7 @@ inquire-domestic {}
         }
         .trip-type {
             margin: 0 12px;
+            border-bottom: 1px solid $border-100;
             >span {
                 @include inlineblock;
                 width: 80px;
@@ -113,6 +115,30 @@ inquire-domestic {}
             >div {
                 @include inlineblock;
             }
+        }
+        .add-tripperson {
+            @include flex-block();
+            padding: 10px 0;
+            border-bottom: 1px solid $border-100;
+            span:last-child {
+                ion-icon {
+                    font-size: 20px;
+                    color: $blue-100;
+                    vertical-align: middle;
+                    margin-left: 5px;
+                }
+            }
+        }
+        .trip-person-list {
+            ion-item-sliding {
+                padding: 0 12px;
+                .item-inner {
+                    padding: 0;
+                }
+            }
+        }
+        .submit-button {
+            padding: 20px 12px;
         }
     }
 }
