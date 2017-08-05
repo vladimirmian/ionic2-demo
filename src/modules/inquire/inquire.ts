@@ -14,6 +14,7 @@ import { Component } from '@angular/core';
     templateUrl: './inquire.html'
 })
 export class InquirePage {
+    public tabTitle = "国内机票";
     DomesticPage:any = DomesticPage;
     HotelPage:any = HotelPage;
     InternationalPage:any = InternationalPage;
@@ -24,5 +25,8 @@ export class InquirePage {
     gotohome() {
         this.viewCtrl.dismiss();
         this.appCtrl.getRootNav().push(MyApp);
+    }
+    ionCheck(tabTitle:string){
+        this.tabTitle = tabTitle;
     }
 }

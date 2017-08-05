@@ -1,11 +1,11 @@
 <ion-header>
   <ion-navbar>
-    <ion-title center>国内机票</ion-title>
+    <ion-title center>{{tabTitle}}</ion-title>
   </ion-navbar>
 </ion-header>
-<ion-tabs [selectedIndex]="0">
-  <ion-tab [root]="DomesticPage" tabTitle="国内机票" tabIcon="home"></ion-tab>
-  <ion-tab [root]="HotelPage" tabTitle="酒店" tabIcon="home"></ion-tab>
-  <ion-tab [root]="InternationalPage" tabTitle="国际机票" tabIcon="home"></ion-tab>
-  <ion-tab [root]="TrainPage" tabTitle="火车票" tabIcon="home"></ion-tab>
+<ion-tabs [selectedIndex]="0" class="inquire-tabs">
+  <ion-tab (ionSelect)="ionCheck('国内机票')" [root]="DomesticPage" tabTitle="国内机票" tabIcon="plane-o"></ion-tab>
+  <ion-tab (ionSelect)="ionCheck('国际机票')" [root]="InternationalPage" tabTitle="国际机票" tabIcon="international-plane"></ion-tab>
+  <ion-tab (ionSelect)="ionCheck('酒店')" [root]="HotelPage" tabTitle="酒店" tabIcon="hotel-o"></ion-tab>
+  <ion-tab (ionSelect)="ionCheck('火车票')" [root]="TrainPage" tabTitle="火车票" tabIcon="train-o"></ion-tab>
 </ion-tabs>

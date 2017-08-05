@@ -18,6 +18,7 @@ inquire-domestic{}
             font-size: 14px;
             color: $black-25;
             &.active{
+                color: $blue-100;
                 border-bottom:2px solid $blue-100;
             }
         }
