@@ -1,3 +1,4 @@
+import { CitySelector } from './../pages/city-selector/city';
 import { InquireModule } from './../modules/inquire/inquire.module';
 import { HomeModule } from './../modules/home/home.module';
 import { LoginPage } from './../pages/login/login';
@@ -13,6 +14,7 @@ let AuthToken = localStorage.getItem('token');
 	declarations: [
 		MyApp,
 		LoginPage,
+		CitySelector
 	],
 	imports: [
 		HomeModule,
@@ -35,6 +37,7 @@ let AuthToken = localStorage.getItem('token');
 	entryComponents: [
 		MyApp,
 		LoginPage,
+		CitySelector
 	],
 	providers: [
 		StatusBar,
