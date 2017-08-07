@@ -15,8 +15,9 @@ export class DomesticPage implements OnInit {
         //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
         //Add 'implements OnInit' to the class.
         this.isOneWay = true;
+        this.modalCtrl.create(CitySelector, { type: 123 }).present();
     }
-    selectCity(){
-        this.modalCtrl.create(CitySelector).present();
+    selectCity() {
+        this.modalCtrl.create(CitySelector, { type: 123 }).present();
     }
 }
