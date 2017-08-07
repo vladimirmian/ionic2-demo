@@ -1,5 +1,5 @@
-import { HomeModule } from './../modules/home/home.module';
 import { InquireModule } from './../modules/inquire/inquire.module';
+import { HomeModule } from './../modules/home/home.module';
 import { LoginPage } from './../pages/login/login';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -15,10 +15,9 @@ let AuthToken = localStorage.getItem('token');
 		LoginPage,
 	],
 	imports: [
-		BrowserModule,
-		InquireModule,
 		HomeModule,
-		IonicPageModule.forChild(MyApp),
+		InquireModule,
+		BrowserModule,
 		IonicModule.forRoot(MyApp, {
 			backButtonText: '',
 			iconMode: 'ios',

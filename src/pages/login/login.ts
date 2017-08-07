@@ -37,7 +37,7 @@ export class LoginPage implements OnInit{
 						RestangularProvider.setDefaultHeaders({ 'AuthToken': res.data.token });
 					});
 					localStorage.setItem('token', res.data.token);
-					this.navCtrl.setRoot('home');
+					this.navCtrl.setRoot('homes');
 				} else {
 					this.tips.presentAlert('', res.msg);
 				}
