@@ -8,16 +8,24 @@
         </ion-buttons>
     </ion-navbar>
     <ion-toolbar>
-        <ion-searchbar [(ngModel)]="myInput" [showCancelButton]="shouldShowCancel" (ionInput)="onInput($event)" (ionCancel)="onCancel($event)"
-            animated="true" placeholder="搜索城市">
+        <ion-searchbar [(ngModel)]="myInput" [showCancelButton]="true" (ionInput)="onInput($event)" (ionCancel)="onCancel($event)" animated="true" placeholder="搜索城市" cancelButtonText="取消">
         </ion-searchbar>
     </ion-toolbar>
 </ion-header>
-<ion-content padding>
-    <div id="hotCity" ng-hide="vm.isFiltering" class="item item-divider">
-        <p>热门城市</p>
-        <button *ngFor="let hotcity of hotelList.hot.cityList">
-            <p>{{hotcity.cityNameCn||hotcity.name||hotcity.display}}</p>
-        </button>
+<ion-content>
+    <div class="city-content">
+        <div id="hotCity" ng-hide="vm.isFiltering" class="item item-divider">
+            <p>热门城市</p>
+            <button *ngFor="let hotcity of hotCityList" class="hot-city">
+                <p>{{hotcity.cityNameCn||hotcity.name||hotcity.display}}</p>
+            </button>
+        </div>
+        <div class="city-all-list">
+            <div *ngFor="let city of cityAllList" [ngClass]="{'tag': city.name}">{{city.name || city.cityNameCn}}</div>
+        </div>
+    </div>
+    <div class="city-letter-index" ion-fixed>
+        <span>*</span>
+        <span *ngFor="let char of letterIndex">{{char}}</span>
     </div>
 </ion-content>
