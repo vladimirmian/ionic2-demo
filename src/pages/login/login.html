@@ -15,7 +15,7 @@
                     <input type="password" name="passWord" class="text-input text-input-ios" [(ngModel)]="loginParams.passWord" #passWord="ngModel" placeholder="请填写密码">
                 </div>
             </div>
-            <div class="button button-ios" (click)="login(loginForm)"><span>登录</span></div>
+            <div ion-button block (click)="login(loginForm)"><span>登录</span></div>
         </form>
         <p class="copyright">Copyright©2017 author by Martin.Chien</p>
         <!-- <ion-list>

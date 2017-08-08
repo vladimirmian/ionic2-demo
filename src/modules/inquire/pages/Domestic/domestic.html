@@ -18,14 +18,8 @@
             <span>请选择到达城市</span>
         </div>
         <div class="trip-time-selector">
-            <div class="time-header">
-                <span>出发日期</span>
-                <span>返程日期</span>
-            </div>
-            <div class="time-body">
-                <span>请选择出发日期</span>
-                <span>请选择返程日期</span>
-            </div>
+            <div (click)="openCalendar()"><span>出发日期</span><b>请选择出发日期</b></div>
+            <div *ngIf="!isOneWay"><span>到达日期</span><b>请选择到达日期</b></div>
         </div>
         <div class="trip-type">
             <span>行程类型</span>

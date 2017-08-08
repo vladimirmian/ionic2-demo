@@ -8,6 +8,7 @@ import { MyApp } from './app.component';
 import { RestangularModule } from 'ngx-restangular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { CalendarModule } from "ion2-calendar";
 let AuthToken = localStorage.getItem('token');
 @NgModule({
 	declarations: [
@@ -18,6 +19,7 @@ let AuthToken = localStorage.getItem('token');
 		BrowserModule,
 		InquireModule,
 		HomeModule,
+		CalendarModule,
 		IonicPageModule.forChild(MyApp),
 		IonicModule.forRoot(MyApp, {
 			backButtonText: '',

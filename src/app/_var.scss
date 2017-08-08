@@ -20,6 +20,10 @@ $border-100:#ddd;
     vertical-align: middle;
 }
 
+@mixin tr {
+    text-align: right;
+}
+
 
 /*pretty form*/
 

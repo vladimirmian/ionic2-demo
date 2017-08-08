@@ -90,15 +90,29 @@ inquire-domestic {}
             }
         }
         .trip-time-selector {
-            .time-header {
-                @include flex-block;
-                font-size: 12px;
-            }
-            .time-body {
-                @include flex-block;
-                line-height: 40px;
-                font-size: 16px;
-                border-bottom: 1px solid $border-100;
+            display: flex;
+            align-items: center;
+            margin: 0 12px;
+            border-bottom: 1px solid $border-100;
+            >div {
+                flex: 1;
+                &:nth-child(2) {
+                    @include tr;
+                }
+                span,
+                b {
+                    display: block;
+                    font-weight: normal;
+                    color: $black-25;
+                }
+                span {
+                    line-height: 30px;
+                    font-size: 14px;
+                }
+                b {
+                    line-height: 30px;
+                    font-size: 16px;
+                }
             }
         }
         .trip-type {
