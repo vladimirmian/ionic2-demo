@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            城市选择器
+        </ion-title>
+        <ion-buttons start>
+            <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
+        </ion-buttons>
+    </ion-navbar>
+    <ion-toolbar>
+        <ion-searchbar [(ngModel)]="myInput" [showCancelButton]="shouldShowCancel" (ionInput)="onInput($event)" (ionCancel)="onCancel($event)"
+            animated="true" placeholder="搜索城市">
+        </ion-searchbar>
+    </ion-toolbar>
+</ion-header>
+<ion-content padding>
+    <div id="hotCity" ng-hide="vm.isFiltering" class="item item-divider">
+        <p>热门城市</p>
+        <button *ngFor="let hotcity of hotelList.hot.cityList">
+            <p>{{hotcity.cityNameCn||hotcity.name||hotcity.display}}</p>
+        </button>
+    </div>
+</ion-content>

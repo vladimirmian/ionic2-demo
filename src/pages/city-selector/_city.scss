@@ -1,0 +1,203 @@
+@import './../../app/_var';
+// 城市选择器
+.city-picker {
+    display: inline-block;
+    width: 100%;
+    min-height: 30px;
+    &.placeholder{
+        font-weight: normal;
+        color: $black-25;
+    }
+}
+.city-picker-list {
+    .bar {
+        .title {
+            color: $blue-100;
+            font-size: 18px;
+        }
+    }
+    .subheader {
+        background-color: $blue-25;
+        top:44px;
+        label{
+            background-color: white;
+            input {
+                text-align: center;
+                &::-webkit-input-placeholder {
+                    color: $blue-50;
+                }
+                &::-moz-placeholder {
+                    color: $blue-50;
+                }
+                &:-moz-placeholder {
+                    color: $blue-50;
+                }
+                &:-ms-input-placeholder {
+                    color: $blue-50;
+                }
+            }
+            .icon{
+                display: inline-block;
+                position: absolute;
+                left: 36%;
+                height: 100%;
+                width: 18px;
+                top:13px;
+                background-size: 18px;
+                background-repeat: no-repeat;
+                &.icon-self-search{
+                    background-image: url('../images/icon/icon_search.png');
+                }
+                &.display{
+                    display: none;
+                }
+            }
+        }
+    }
+    .list {
+        button {
+            position: relative;
+            margin: 5px 2px;
+            min-width: 23%;
+            line-height: 30px;
+            white-space:nowrap;
+            // overflow: hidden;
+            color: $black-25;
+            font-size: 14px;
+            background-color: white;
+            border-color: white;
+            border-style: solid;
+            border-width: 1px;
+            border-color: $border-100;
+            &:active {
+                color: white;
+                border-color: $blue-100;
+                background-color: $blue-50;
+            }
+            &.currentCity{
+                padding-left: 18px;
+                min-width: 23%;
+            }
+
+            .icon-position {
+                position: absolute;
+                background-image: url('../images/icon/icon_position.png');
+                height: 20px;
+                width: 20px;
+                background-repeat: no-repeat;
+                background-size: 17px;
+                left: 5px;
+                top: 6px;
+            }
+        }
+        .currentCityFail {
+            line-height: 34px;
+            color: gray;
+            font-size: 12px;
+        }
+    }
+    .item {
+        white-space: normal;
+        font-size: 14px;
+        
+    }
+    .item-divider {
+        border: none;
+        padding: 2px 16px;
+        p {
+            color: $black-25;
+        }
+    }
+    .item-elements {
+        .item{
+            &:first-child{
+                border-top: none;
+            }
+        }
+    }
+    .letter-Index {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0,0,0);
+        position: absolute;
+        width: 28px;
+        text-align: center; 
+        right: 0;
+        top: 93px;
+        z-index: 9999;
+        color: $blue-50;
+    }
+    .letter-current {
+        text-align: center;
+        position:fixed;
+        left:50%;
+        top:35%;
+        margin-left: -20px;
+        width:40px;
+        line-height:40px;
+        background:#ddd;
+        align-items:center;
+        font-size:20px;
+        color:#262626;
+        z-index: 9999;
+    }
+
+    .countryType{
+        top: 88px;
+        height: 44px;
+        >div{
+            width: 50%;
+            line-height: 40px;
+            text-align: center;
+            span{
+                display: inline-block;
+                line-height: 34px;
+                padding: 0 10px;
+                color: $blue-100;
+                font-size: 16px;
+            }
+            &.active{
+                span{
+                    border-bottom: 2px solid $blue-100;
+                }
+            }
+        }
+
+    }
+    .has-threeheader {
+            top:132px;
+    }
+    @media (min-width: 680px){
+        &.modal {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+        }
+    }
+ 
+    
+}
+
+.platform-ios-equipment {
+    .city-picker-list{
+        .countryType,
+        .subheader{
+            height: 44px!important;
+            >div{
+                margin-top: 0!important;
+            }
+        }
+        .countryType{
+            top: 108px!important;
+        }
+        .letter-Index{
+            top: 103px;
+        }
+        .has-subheader{
+            top:108px!important;
+        }
+        .has-threeheader {
+            top:152px!important;
+        }
+    }
+}

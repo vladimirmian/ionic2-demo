@@ -6,6 +6,7 @@ import { NgModule } from '@angular/core';
     imports:[
         IonicPageModule.forChild(HomePage)
     ],
-    entryComponents:[HomePage]
+    entryComponents:[HomePage],
+    exports:[IonicPageModule]
 })
 export class HomeModule{}

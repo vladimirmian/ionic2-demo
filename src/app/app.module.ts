@@ -1,5 +1,6 @@
-import { HomeModule } from './../modules/home/home.module';
+import { CitySelector } from './../pages/city-selector/city';
 import { InquireModule } from './../modules/inquire/inquire.module';
+import { HomeModule } from './../modules/home/home.module';
 import { LoginPage } from './../pages/login/login';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -14,13 +15,17 @@ let AuthToken = localStorage.getItem('token');
 	declarations: [
 		MyApp,
 		LoginPage,
+		CitySelector
 	],
 	imports: [
-		BrowserModule,
-		InquireModule,
 		HomeModule,
+<<<<<<< HEAD
 		CalendarModule,
 		IonicPageModule.forChild(MyApp),
+=======
+		InquireModule,
+		BrowserModule,
+>>>>>>> 2b641148eb590423323c809b2e5c6b7a299d8e80
 		IonicModule.forRoot(MyApp, {
 			backButtonText: '',
 			iconMode: 'ios',
@@ -38,6 +43,7 @@ let AuthToken = localStorage.getItem('token');
 	entryComponents: [
 		MyApp,
 		LoginPage,
+		CitySelector
 	],
 	providers: [
 		StatusBar,

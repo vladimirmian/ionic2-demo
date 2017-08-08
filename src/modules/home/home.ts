@@ -1,4 +1,3 @@
-import { MyApp } from './../../app/app.component';
 import { CustantService } from './../../service/custant.service';
 import { TipService } from './../../service/tips';
 import { CommonStore } from './../../store/common.store';
@@ -6,13 +5,13 @@ import { Component, OnInit } from '@angular/core';
 import { NavController, IonicPage, ViewController, App } from 'ionic-angular';
 import { userinfo } from './../../interface/userInfo.interface';
 @IonicPage({
-	name: "home",
-	segment: "home"
+	name: "homes",
+	segment: "index"
 })
 @Component({
 	providers: [CommonStore, TipService, CustantService],
 	selector: 'page-home',
-	templateUrl: 'home.html'
+	templateUrl: './home.html'
 })
 export class HomePage implements OnInit {
 	rootPage: any = HomePage;
