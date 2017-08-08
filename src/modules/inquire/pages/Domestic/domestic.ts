@@ -8,7 +8,7 @@ import { CalendarController } from "ion2-calendar/dist";
 })
 export class DomesticPage implements OnInit {
     private isOneWay: boolean;
-    constructor(public navCtrl: NavController, public modalCtrl: ModalController) {
+    constructor(public navCtrl: NavController, public modalCtrl: ModalController,public calendarCtrl:CalendarController) {
 
     }
     ngOnInit() {

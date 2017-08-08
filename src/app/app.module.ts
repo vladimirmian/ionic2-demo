@@ -19,6 +19,8 @@ let AuthToken = localStorage.getItem('token');
 	],
 	imports: [
 		HomeModule,
+		InquireModule,
+		BrowserModule,
 		CalendarModule,
 		IonicPageModule.forChild(MyApp),
 		IonicModule.forRoot(MyApp, {
