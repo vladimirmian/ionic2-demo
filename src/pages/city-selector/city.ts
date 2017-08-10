@@ -1,23 +1,31 @@
-import { CityData } from './city_list';
+import { CityData } from './city_data_manage';
 import { ViewController, NavParams, Content } from 'ionic-angular';
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, OnInit } from '@angular/core';
 @Component({
     providers: [CityData],
     templateUrl: "./city.html",
     selector: 'city-selector'
 })
-export class CitySelector {
+export class CitySelector implements OnInit {
     @ViewChild(CitySelector) CitySelector: Content;
+    private cityType;//接受传过来的type去查找城市类型
     private citylist;
-    private hotCityList;
-    private letterIndex;
+    private hotCityList;//热门城市
+    private letterIndex;//字母列表
     private letterInfo;
-    private cityAllList;
+    private cityAllList;//所有城市列表
+
     constructor(public viewCtrl: ViewController, public navParams: NavParams, public CityData: CityData) {
+        console.log(this.navParams)
+        this.cityType = this.navParams.data.type;
+
         this.citylist = this.CityData.getHOTELCITYLIST();
         this.hotCityList = this.citylist.hot.cityList;
         this.letterIndex = this.citylist.keys;
         this.cityAllList = this.citylist.domestic;
+    }
+    ngOnInit() {
+        // ...
     }
     close() {
         this.viewCtrl.dismiss();

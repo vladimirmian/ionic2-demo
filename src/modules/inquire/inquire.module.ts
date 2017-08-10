@@ -24,11 +24,11 @@ import { NgModule } from '@angular/core';
         HotelPage,
         TrainPage
     ],
-    exports:[
+    exports: [
         IonicPageModule
     ]
 })
-export class InquireModule { 
-    constructor(){
+export class InquireModule {
+    constructor() {
     }
 }
