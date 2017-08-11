@@ -16,16 +16,19 @@ export class CitySelector implements OnInit {
     private cityAllList;//所有城市列表
 
     constructor(public viewCtrl: ViewController, public navParams: NavParams, public CityData: CityData) {
-        console.log(this.navParams)
         this.cityType = this.navParams.data.type;
-
-        this.citylist = this.CityData.getHOTELCITYLIST();
-        this.hotCityList = this.citylist.hot.cityList;
-        this.letterIndex = this.citylist.keys;
-        this.cityAllList = this.citylist.domestic;
     }
     ngOnInit() {
-        // ...
+        if (this.cityType == 'hotel') {
+            this.citylist = this.CityData.getHOTELCITYLIST();
+            this.hotCityList = this.citylist.hot.cityList;
+            this.letterIndex = this.citylist.keys;
+            this.cityAllList = this.citylist.domestic;
+        }
+    }
+    select(city:Object){
+        let callback = city;
+        this.viewCtrl.dismiss(callback);
     }
     close() {
         this.viewCtrl.dismiss();

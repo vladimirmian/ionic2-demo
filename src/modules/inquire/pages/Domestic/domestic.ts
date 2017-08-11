@@ -2,31 +2,50 @@ import { CitySelector } from './../../../../pages/city-selector/city';
 import { NavController, ModalController } from 'ionic-angular';
 import { Component, OnInit } from '@angular/core';
 import { CalendarController } from "ion2-calendar/dist";
+import { inlandParams } from './domestic.interface';
 @Component({
     selector: "inquire-domestic",
     templateUrl: "./domestic.html"
 })
 export class DomesticPage implements OnInit {
     private isOneWay: boolean;
-    constructor(public navCtrl: NavController, public modalCtrl: ModalController,public calendarCtrl:CalendarController) {
+    private inlandParams = inlandParams;
+    private departCity;
+    private arriveCity;
+    constructor(public navCtrl: NavController, public modalCtrl: ModalController, public calendarCtrl: CalendarController) {
 
     }
     ngOnInit() {
-        //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-        //Add 'implements OnInit' to the class.
         this.isOneWay = true;
-        this.modalCtrl.create(CitySelector, { type: 123 }).present();
     }
-    selectCity() {
-        this.modalCtrl.create(CitySelector, { type: 123 }).present();
+    selectCity(type: String) {
+        let cityModal = this.modalCtrl.create(CitySelector, { type: 'hotel' });
+        cityModal.onDidDismiss(data => {
+            if(!data) return;
+            if(type == 'go'){
+                this.inlandParams.departCity = data.cityCode;
+                this.departCity = data.cityNameCn;
+            }else{
+                this.inlandParams.arriveCity = data.cityCode;
+                this.arriveCity = data.cityNameCn;
+            }
+        });
+        cityModal.present();
     }
-    openCalendar() {
+    openCalendar(type:String) {
         this.calendarCtrl.openCalendar({
-            closeLabel:"取消",
+            closeLabel: "取消",
             title: '选择日期',
-            canBackwardsSelected:false,
-            monthTitle:"yyyy年M月",
-            weekdaysTitle:['日','一','二','三','四','五','六']
-        }).then((res: any) => { console.log(res) }).catch(() => { })
+            canBackwardsSelected: false,
+            monthTitle: "yyyy年M月",
+            weekdaysTitle: ['日', '一', '二', '三', '四', '五', '六']
+        }).then((res: any) => { 
+            console.log(res)
+            if(type == 'go'){
+                this.inlandParams.departDate = res.date.time;
+            }else{
+                this.inlandParams.arriveDate = res.date.time;
+            }
+         }).catch(() => { })
     }
 }

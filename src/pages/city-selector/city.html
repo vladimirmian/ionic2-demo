@@ -16,7 +16,7 @@
     <div class="city-content">
         <div id="hotCity" ng-hide="vm.isFiltering" class="item item-divider">
             <p>热门城市</p>
-            <button *ngFor="let hotcity of hotCityList" class="hot-city">
+            <button class="hot-city" *ngFor="let hotcity of hotCityList" (click)="select(hotcity)">
                 <p>{{hotcity.cityNameCn||hotcity.name||hotcity.display}}</p>
             </button>
         </div>
