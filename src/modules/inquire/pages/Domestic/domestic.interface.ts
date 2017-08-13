@@ -3,7 +3,7 @@ let inlandParams = {
     arriveCity: "",//到达城市，类型为往返时必填
     departDate: "",//出发日期，13位时间戳 必填
     arriveDate:"",//出发日期，13位时间戳 必填
-    tripType: "",//出行类型，1-因公,2-因私
+    tripType: '1',//出行类型，1-因公,2-因私
     tripPersons: [{//出行人员信息,必填信息
         id: "",//出行人ID
         personType: "",//人员类型，1-系统里的出行人，2-临时出行人

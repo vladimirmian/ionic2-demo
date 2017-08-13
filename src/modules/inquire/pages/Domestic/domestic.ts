@@ -9,7 +9,7 @@ import { inlandParams } from './domestic.interface';
 })
 export class DomesticPage implements OnInit {
     private isOneWay: boolean;
-    private inlandParams = inlandParams;
+    private inlandParams;
     private departCity;
     private arriveCity;
     constructor(public navCtrl: NavController, public modalCtrl: ModalController, public calendarCtrl: CalendarController) {
@@ -17,6 +17,8 @@ export class DomesticPage implements OnInit {
     }
     ngOnInit() {
         this.isOneWay = true;
+        this.inlandParams = inlandParams;
+        console.log(this.inlandParams.tripType)
     }
     selectCity(type: String) {
         let cityModal = this.modalCtrl.create(CitySelector, { type: 'hotel' });
