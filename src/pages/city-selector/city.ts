@@ -1,12 +1,12 @@
 import { CityData } from './city_data_manage';
 import { ViewController, NavParams, Content } from 'ionic-angular';
-import { Component, ViewChild, OnInit } from '@angular/core';
+import { Component, ViewChild, OnInit, AfterViewInit } from '@angular/core';
 @Component({
     providers: [CityData],
     templateUrl: "./city.html",
     selector: 'city-selector'
 })
-export class CitySelector implements OnInit {
+export class CitySelector implements OnInit ,AfterViewInit{
     @ViewChild(CitySelector) CitySelector: Content;
     private cityType;//接受传过来的type去查找城市类型
     private citylist;
@@ -18,7 +18,10 @@ export class CitySelector implements OnInit {
     constructor(public viewCtrl: ViewController, public navParams: NavParams, public CityData: CityData) {
         this.cityType = this.navParams.data.type;
     }
-    ngOnInit() {
+    ngAfterViewInit() {
+        //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
+        //Add 'implements AfterViewInit' to the class.
+        
         if (this.cityType == 'hotel') {
             this.citylist = this.CityData.getHOTELCITYLIST();
             this.hotCityList = this.citylist.hot.cityList;
@@ -26,8 +29,11 @@ export class CitySelector implements OnInit {
             this.cityAllList = this.citylist.domestic;
         }
     }
-    select(city:Object){
+    ngOnInit() {
+    }
+    select(city:any){
         let callback = city;
+        if(callback.tag) return;
         this.viewCtrl.dismiss(callback);
     }
     close() {

@@ -21,7 +21,7 @@
             </button>
         </div>
         <div class="city-all-list">
-            <div *ngFor="let city of cityAllList" [ngClass]="{'tag': city.name}">{{city.name || city.cityNameCn}}</div>
+            <div *ngFor="let city of cityAllList" [ngClass]="{'tag': city.name}" (click)="select(city)">{{city.name || city.cityNameCn}}</div>
         </div>
     </div>
     <div class="city-letter-index" ion-fixed>

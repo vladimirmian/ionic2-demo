@@ -28,18 +28,25 @@
                         <span>{{inlandParams.departDate | date:"EEE"}}</span>
                     </b>
                     </div>
-                    <div *ngIf="!isOneWay" (click)="openCalendar()"><span>到达日期</span><b>请选择到达日期</b></div>
+                    <div *ngIf="!isOneWay" (click)="openCalendar()">
+                        <span>到达日期</span>
+                        <b *ngIf="!inlandParams.arriveDate">请选择出发日期</b>
+                        <b *ngIf="inlandParams.arriveDate" class="bold">
+                        {{inlandParams.arriveDate | date:"MM月dd日"}}
+                        <span>{{inlandParams.arriveDate | date:"EEE"}}</span>
+                        </b>
+                    </div>
                 </div>
                 <div class="trip-type">
                     <span>行程类型</span>
                     <div>
                         <label class="pretty-radio">
-                    <input type="radio" name="triptype"  [value]="'1'" [(ngModel)]="this.inlandParams.tripType">
+                    <input type="radio" name="triptype"  [value]="'1'" [(ngModel)]="inlandParams.tripType">
                     <span>
                         <ion-icon name="checkmark"></ion-icon>
                         <b>因公</b>
-                    </span>
-                </label>
+                        </span>
+                        </label>
                         <label class="pretty-radio">
                     <input type="radio" name="triptype" [value]="'2'" [(ngModel)]="inlandParams.tripType">
                     <span>

@@ -1,19 +1,22 @@
 import { CitySelector } from './../../../../pages/city-selector/city';
 import { NavController, ModalController } from 'ionic-angular';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,AfterViewInit } from '@angular/core';
 import { CalendarController } from "ion2-calendar/dist";
 import { inlandParams } from './domestic.interface';
 @Component({
     selector: "inquire-domestic",
     templateUrl: "./domestic.html"
 })
-export class DomesticPage implements OnInit {
+export class DomesticPage implements OnInit,AfterViewInit  {
     private isOneWay: boolean;
     private inlandParams;
     private departCity;
     private arriveCity;
     constructor(public navCtrl: NavController, public modalCtrl: ModalController, public calendarCtrl: CalendarController) {
 
+    }
+    ngAfterViewInit(){
+        
     }
     ngOnInit() {
         this.isOneWay = true;
