@@ -76,7 +76,7 @@ inquire-domestic {}
             span {
                 flex: 2;
                 text-align: left;
-                font-size: 16px;
+                font-size: 20px;
                 color: $black-25;
                 &.bold {
                     color: $black-100;
@@ -118,9 +118,15 @@ inquire-domestic {}
                 }
                 b {
                     line-height: 30px;
-                    font-size: 16px;
+                    font-size: 20px;
                     &.bold {
                         color: $black-100;
+                    }
+                    span {
+                        display: inline-block;
+                        vertical-align: baseline;
+                        font-size: 12px;
+                        line-height: 1;
                     }
                 }
             }
