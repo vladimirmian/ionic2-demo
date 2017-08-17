@@ -1,4 +1,4 @@
-import { TravelerModule } from './../modules/traveler/traveler.module';
+import { TravelerModal } from './../pages/traveler/traveler.modal';
 import { CitySelector } from './../pages/city-selector/city';
 import { InquireModule } from './../modules/inquire/inquire.module';
 import { HomeModule } from './../modules/home/home.module';
@@ -16,14 +16,14 @@ let AuthToken = localStorage.getItem('token');
 	declarations: [
 		MyApp,
 		LoginPage,
-		CitySelector
+		CitySelector,
+		TravelerModal
 	],
 	imports: [
 		HomeModule,
 		InquireModule,
 		BrowserModule,
 		CalendarModule,
-		TravelerModule,
 		IonicPageModule.forChild(MyApp),
 		IonicModule.forRoot(MyApp, {
 			backButtonText: '',
@@ -42,7 +42,8 @@ let AuthToken = localStorage.getItem('token');
 	entryComponents: [
 		MyApp,
 		LoginPage,
-		CitySelector
+		CitySelector,
+		TravelerModal
 	],
 	providers: [
 		StatusBar,

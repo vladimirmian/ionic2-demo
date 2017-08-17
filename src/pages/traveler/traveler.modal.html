@@ -1,0 +1,30 @@
+<ion-header class="traveler-header">
+    <ion-navbar>
+        <ion-title>
+            选择出差人
+        </ion-title>
+        <ion-buttons start>
+            <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
+        </ion-buttons>
+    </ion-navbar>
+    <ion-toolbar>
+        <div class="switch-bar">
+            <div (click)="status = '1'">
+                <span [ngClass]="{'active': status == '1'}">公司列表</span>
+            </div>
+            <div (click)="status = '2'">
+                <span [ngClass]="{'active': status == '2'}">临时出行人</span>
+            </div>
+        </div>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="traveler-panel">
+    <div class="seacher-bar" ion-fixed>
+        <ion-searchbar [(ngModel)]="myInput" [showCancelButton]="true" (ionInput)="onInput($event)" (ionCancel)="onCancel($event)" animated="true" placeholder="搜索出差人" cancelButtonText="取消">
+        </ion-searchbar>
+    </div>
+    <div class="list-content">
+
+    </div>
+</ion-content>

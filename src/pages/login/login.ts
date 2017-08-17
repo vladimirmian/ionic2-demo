@@ -32,7 +32,7 @@ export class LoginPage implements OnInit{
 			this.tips.presentAlert();
 		} else {
 			this.CommonStore.login(this.loginParams).subscribe((res) => {
-				if (res.status == 200) {
+				if (res.status == '200') {
 					RestangularModule.forRoot((RestangularProvider) => {
 						RestangularProvider.setDefaultHeaders({ 'AuthToken': res.data.token });
 					});

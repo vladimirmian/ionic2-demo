@@ -1,3 +1,4 @@
+import { TravelerModal } from './../../../../pages/traveler/traveler.modal';
 import { CitySelector } from './../../../../pages/city-selector/city';
 import { NavController, ModalController } from 'ionic-angular';
 import { Component, OnInit, AfterViewInit } from '@angular/core';
@@ -22,7 +23,11 @@ export class DomesticPage implements OnInit, AfterViewInit {
     ngOnInit() {
         this.isOneWay = true;
         this.inlandParams = inlandParams;
-        console.log(this.inlandParams.tripType)
+        let travelerModal = this.modalCtrl.create(TravelerModal);
+        travelerModal.onDidDismiss(data=>{
+            if(!data) return;
+        });
+        travelerModal.present();
     }
     selectCity(type: String) {
         let cityModal = this.modalCtrl.create(CitySelector, { type: 'hotel' });
@@ -56,6 +61,10 @@ export class DomesticPage implements OnInit, AfterViewInit {
     }
     
     selectTraveler() {
-        this.navCtrl.push('travler-page');
+        let travelerModal = this.modalCtrl.create(TravelerModal);
+        travelerModal.onDidDismiss(data=>{
+            if(!data) return;
+        });
+        travelerModal.present();
     }
 }
