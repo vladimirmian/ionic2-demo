@@ -38,6 +38,6 @@ export class CommonStore {
      * 获取出行人信息
      */
     getTripPerson(params){
-        return this.restangular.all('userInfo/tripPerson').customGET('');
+        return this.restangular.all('userInfo/tripPerson').customGET('',params);
     }
 }
