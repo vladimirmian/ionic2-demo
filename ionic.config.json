@@ -1,9 +1,0 @@
-{
-  "name": "ionic2-demo",
-  "app_id": "",
-  "type": "ionic-angular",
-  "proxies": [{
-    "path": "/test/app",
-    "proxyUrl": "http://test03.tmc-china.com:81/api/app"
-  }]
-}
