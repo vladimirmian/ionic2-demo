@@ -1,3 +1,4 @@
+import { ComponentsModule } from './../components/components.module';
 import { GlobalModule } from './../global/global.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -15,6 +16,7 @@ import { MyApp } from './app.component';
         BrowserModule,
         GlobalModule,
         IonicPageModule,
+        ComponentsModule,
         IonicModule.forRoot(MyApp, {
             backButtonText: '',
             iconMode: 'ios',
@@ -23,6 +25,7 @@ import { MyApp } from './app.component';
             tabsPlacement: 'bottom',
             pageTransition: 'ios-transition'
         }),
+        // InquirePageModule.forRoot(),
         RestangularModule.forRoot((RestangularProvider) => {
             RestangularProvider.setBaseUrl('api');
             // RestangularProvider.setDefaultHeaders({'AuthoriAuzation': 'Bearer UDXPx-Xko0w4BRKajozCVy20X11MRZs1'});
