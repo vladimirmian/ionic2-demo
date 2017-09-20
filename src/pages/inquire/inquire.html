@@ -1,12 +1,29 @@
 <ion-header>
-
     <ion-navbar>
-        <ion-title>inquire</ion-title>
+        <ion-title>产品查询</ion-title>
     </ion-navbar>
-
+    <ion-toolbar no-border-top>
+        <ion-segment [(ngModel)]="appType">
+            <ion-segment-button value="airplane">
+                国内机票
+            </ion-segment-button>
+            <ion-segment-button value="interair">
+                国际机票
+            </ion-segment-button>
+            <ion-segment-button value="hotel">
+                预订酒店
+            </ion-segment-button>
+            <ion-segment-button value="train">
+                订火车票
+            </ion-segment-button>
+        </ion-segment>
+    </ion-toolbar>
 </ion-header>
 
 
 <ion-content padding>
-    <h1 (click)="gotoHome()">go home</h1>
+    <airplane *ngIf="appType == 'airplane'"></airplane>
+    <interair *ngIf="appType == 'interair'"></interair>
+    <hotel *ngIf="appType == 'hotel'"></hotel>
+    <train *ngIf="appType == 'train'"></train>
 </ion-content>

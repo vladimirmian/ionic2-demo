@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the HotelPage page.
+ * Generated class for the PersonPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,16 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-hotel',
-  templateUrl: 'hotel.html',
+  selector: 'page-person',
+  templateUrl: 'person.html',
 })
-export class HotelPage {
+export class PersonPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad HotelPage');
+    console.log('ionViewDidLoad PersonPage');
   }
 
 }

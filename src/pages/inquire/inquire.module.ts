@@ -1,13 +1,15 @@
+import { ComponentsModule } from './../../components/components.module';
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { InquirePage } from './inquire';
 
 @NgModule({
-  declarations: [
-    InquirePage,
-  ],
-  imports: [
-    IonicPageModule.forChild(InquirePage),
-  ],
+    imports: [
+        ComponentsModule,
+        IonicPageModule.forChild(InquirePage),
+    ],
+    declarations: [
+        InquirePage,
+    ],
 })
-export class InquirePageModule {}
+export class InquirePageModule { }
