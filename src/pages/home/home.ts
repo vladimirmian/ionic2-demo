@@ -28,4 +28,7 @@ export class HomePage {
             inquireIndex: index
         });
     }
+    saerch(){
+        this.navCtrl.push('search');
+    }
 }

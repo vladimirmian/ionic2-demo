@@ -8,6 +8,6 @@ import { InquirePage } from './inquire';
   ],
   imports: [
     IonicPageModule.forChild(InquirePage),
-  ]
+  ],
 })
 export class InquirePageModule {}

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the InquirePage tabs.
+ * Generated class for the InquirePage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -13,17 +13,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 @Component({
     selector: 'page-inquire',
-    templateUrl: 'inquire.html'
+    templateUrl: 'inquire.html',
 })
 export class InquirePage {
-    public inquireIndex = 1;
-    airplaneRoot = 'AirplanePage';
-    hotelRoot = 'HotelPage';
-    internationalRoot = 'InternationalPage';
-    trainRoot = 'TrainPage';
 
+    constructor(public navCtrl: NavController, public navParams: NavParams) {
+        console.log(this.navCtrl.first())
+    }
 
-    constructor(public navCtrl: NavController, private NavParams: NavParams) { }
-    
-
+    ionViewDidLoad() {
+        console.log('ionViewDidLoad InquirePage');
+    }
+    gotoHome() {
+        this.navCtrl.setRoot('home');
+    }
 }

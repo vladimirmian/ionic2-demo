@@ -7,7 +7,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { RestangularModule } from 'ngx-restangular';
 import { MyApp } from './app.component';
-
+import { CalendarModule } from "ion2-calendar";
 @NgModule({
     declarations: [
         MyApp,
@@ -15,6 +15,7 @@ import { MyApp } from './app.component';
     imports: [
         BrowserModule,
         GlobalModule,
+        CalendarModule,
         IonicPageModule,
         ComponentsModule,
         IonicModule.forRoot(MyApp, {

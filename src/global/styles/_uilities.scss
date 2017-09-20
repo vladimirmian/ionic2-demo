@@ -1,0 +1,554 @@
+@charset "UTF-8";
+$xxs: 2px;
+$xs: 5px;
+$sm: 10px;
+$md: 15px;
+$df: 20px;
+$lg: 25px;
+$xlg: 30px;
+@import "./_var.scss";
+
+/*简易样式*/
+
+.tc {
+    text-align: center;
+}
+
+.tr {
+    text-align: right;
+}
+
+
+/*border*/
+
+.bb1 {
+    border-bottom: 1px solid $black-50;
+    border-radius: 4px;
+}
+
+
+/*font size*/
+
+.ft12 {
+    font-size: $fz-12;
+}
+
+.ft14 {
+    font-size: $fz-14;
+}
+
+.ft16 {
+    font-size: $fz-16;
+}
+
+.ft18 {
+    font-size: $fz-18;
+}
+
+.ft20 {
+    font-size: $fz-20;
+}
+
+.ft28 {
+    font-size: $fz-28;
+}
+
+
+/* Margins */
+
+.no-margin {
+    margin: 0 !important;
+}
+
+.mn {
+    margin-right: -$md;
+    margin-left: -$md;
+}
+
+.mrn {
+    margin-right: -$md;
+}
+
+.mln {
+    margin-left: -$md;
+}
+
+.mtn {
+    margin-top: -$md;
+}
+
+.mbn {
+    margin-bottom: -$md;
+}
+
+.mbn {
+    margin-bottom: -$md;
+}
+
+.ml0 {
+    margin-left: 0;
+}
+
+.mr0 {
+    margin-right: 0;
+}
+
+.mt0 {
+    margin-top: 0;
+}
+
+.mb0 {
+    margin-bottom: 0;
+}
+
+.m30 {
+    margin: $xlg;
+}
+
+.mr30 {
+    margin-right: $xlg;
+}
+
+.ml30 {
+    margin-left: $xlg;
+}
+
+.mt30 {
+    margin-top: $xlg;
+}
+
+.mb30 {
+    margin-bottom: $xlg;
+}
+
+.m25 {
+    margin: $lg;
+}
+
+.mr25 {
+    margin-right: $lg;
+}
+
+.ml25 {
+    margin-left: $lg;
+}
+
+.mt25 {
+    margin-top: $lg;
+}
+
+.mb25 {
+    margin-bottom: $lg;
+}
+
+.m20 {
+    margin: $df;
+}
+
+.mr20 {
+    margin-right: $df;
+}
+
+.ml20 {
+    margin-left: $df;
+}
+
+.mt20 {
+    margin-top: $df;
+}
+
+.mb20 {
+    margin-bottom: $df;
+}
+
+.m15 {
+    margin: $md;
+}
+
+.mr15 {
+    margin-right: $md;
+}
+
+.ml15 {
+    margin-left: $md;
+}
+
+.mt15 {
+    margin-top: $md;
+}
+
+.mb15 {
+    margin-bottom: $md;
+}
+
+.m10 {
+    margin: $sm;
+}
+
+.mr10 {
+    margin-right: $sm;
+}
+
+.ml10 {
+    margin-left: $sm;
+}
+
+.mt10 {
+    margin-top: $sm;
+}
+
+.mb10 {
+    margin-bottom: $sm;
+}
+
+.m5 {
+    margin: $xs;
+}
+
+.mr5 {
+    margin-right: $xs;
+}
+
+.ml5 {
+    margin-left: $xs;
+}
+
+.mt5 {
+    margin-top: $xs;
+}
+
+.mb5 {
+    margin-bottom: $xs;
+}
+
+.m2 {
+    margin: $xxs;
+}
+
+.mr2 {
+    margin-right: $xxs;
+}
+
+.ml2 {
+    margin-left: $xxs;
+}
+
+.mt2 {
+    margin-top: $xxs;
+}
+
+.mb2 {
+    margin-bottom: $xxs;
+}
+
+
+/* Padding */
+
+.no-padding:not(.main-content) {
+    padding: 0 !important;
+}
+
+.pl0 {
+    padding-left: 0;
+}
+
+.pr0 {
+    padding-right: 0;
+}
+
+.pt0 {
+    padding-top: 0 !important;
+}
+
+.pb0 {
+    padding-bottom: 0;
+}
+
+.p30 {
+    padding: $xlg;
+}
+
+.pr30 {
+    padding-right: $xlg;
+}
+
+.pl30 {
+    padding-left: $xlg;
+}
+
+.pt30 {
+    padding-top: $xlg;
+}
+
+.pb30 {
+    padding-bottom: $xlg;
+}
+
+.p25 {
+    padding: $lg;
+}
+
+.pr25 {
+    padding-right: $lg;
+}
+
+.pl25 {
+    padding-left: $lg;
+}
+
+.pt25 {
+    padding-top: $lg;
+}
+
+.pb25 {
+    padding-bottom: $lg;
+}
+
+.p20 {
+    padding: $df;
+}
+
+.pr20 {
+    padding-right: $df;
+}
+
+.pl20 {
+    padding-left: $df;
+}
+
+.pt20 {
+    padding-top: $df;
+}
+
+.pb20 {
+    padding-bottom: $df;
+}
+
+.p15 {
+    padding: $md;
+}
+
+.pr15 {
+    padding-right: $md;
+}
+
+.pl15 {
+    padding-left: $md;
+}
+
+.pt15 {
+    padding-top: $md;
+}
+
+.pb15 {
+    padding-bottom: $md;
+}
+
+.p10 {
+    padding: $sm;
+}
+
+.pr10 {
+    padding-right: $sm;
+}
+
+.pl10 {
+    padding-left: $sm;
+}
+
+.pt10 {
+    padding-top: $sm;
+}
+
+.pb10 {
+    padding-bottom: $sm;
+}
+
+.p5 {
+    padding: $xs;
+}
+
+.pr5 {
+    padding-right: $xs;
+}
+
+.pl5 {
+    padding-left: $xs;
+}
+
+.pt5 {
+    padding-top: $xs;
+}
+
+.pb5 {
+    padding-bottom: $xs;
+}
+
+.p2 {
+    padding: $xxs;
+}
+
+.pr2 {
+    padding-right: $xxs;
+}
+
+.pl2 {
+    padding-left: $xxs;
+}
+
+.pt2 {
+    padding-top: $xxs;
+}
+
+.pb2 {
+    padding-bottom: $xxs;
+}
+
+
+/* Float */
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clear {
+    clear: both;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*blue font*/
+
+.blue-125 {
+    color: $blue-125;
+}
+
+.blue-100 {
+    color: $blue-100;
+}
+
+.blue-75 {
+    color: $blue-75;
+}
+
+.blue-50 {
+    color: $blue-50;
+}
+
+.blue-25 {
+    color: $blue-25;
+}
+
+.blue-10 {
+    color: $blue-10;
+}
+
+
+/*black font*/
+
+.black-125 {
+    color: $black-125;
+}
+
+.black-100 {
+    color: $black-100;
+}
+
+.black-75 {
+    color: $black-75;
+}
+
+.black-50 {
+    color: $black-50;
+}
+
+.black-25 {
+    color: $black-25;
+}
+
+.black-10 {
+    color: $black-10;
+}
+
+
+/*orange font*/
+
+.orange-125 {
+    color: $orange-125;
+}
+
+.orange-100 {
+    color: $orange-100;
+}
+
+.orange-75 {
+    color: $orange-75;
+}
+
+.orange-50 {
+    color: $orange-50;
+}
+
+.orange-25 {
+    color: $orange-25;
+}
+
+.orange-10 {
+    color: $orange-10;
+}
+
+
+/*red font*/
+
+.red-125 {
+    color: $red-125;
+}
+
+.red-100 {
+    color: $red-100;
+}
+
+.red-75 {
+    color: $red-75;
+}
+
+.red-50 {
+    color: $red-50;
+}
+
+.red-25 {
+    color: $red-25;
+}
+
+.red-10 {
+    color: $red-10;
+}
+
+.green-125 {
+    color: $green-125;
+}
+
+.green-100 {
+    color: $green-100;
+}
+
+.green-75 {
+    color: $green-75;
+}
+
+.green-50 {
+    color: $green-50;
+}
+
+.green-25 {
+    color: $green-25;
+}
+
+.green-10 {
+    color: $green-10;
+}

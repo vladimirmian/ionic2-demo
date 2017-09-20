@@ -10,16 +10,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-airplane',
-  templateUrl: 'airplane.html',
+    selector: 'page-airplane',
+    templateUrl: 'airplane.html',
 })
 export class AirplanePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+    constructor(public navCtrl: NavController, public navParams: NavParams) {
+    }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad AirplanePage');
-  }
-
+    ionViewDidLoad() {
+        console.log('ionViewDidLoad AirplanePage');
+    }
+    // gotoInquire() {
+    //     this.navCtrl.setRoot('inquire');
+    // }
 }

@@ -1,6 +1,12 @@
-<ion-tabs selectedIndex="inquireIndex">
-    <ion-tab [root]="airplaneRoot" tabTitle="国内机票" tabIcon="information-circle"></ion-tab>
-    <ion-tab [root]="internationalRoot" tabTitle="国际机票" tabIcon="information-circle"></ion-tab>
-    <ion-tab [root]="hotelRoot" tabTitle="查询酒店" tabIcon="information-circle"></ion-tab>
-    <ion-tab [root]="trainRoot" tabTitle="订火车票" tabIcon="information-circle"></ion-tab>
-</ion-tabs>
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>inquire</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <h1 (click)="gotoHome()">go home</h1>
+</ion-content>
