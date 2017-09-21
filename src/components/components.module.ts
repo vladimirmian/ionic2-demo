@@ -4,13 +4,15 @@ import { TravelerComponent } from './traveler/traveler';
 import { AirplaneComponent } from './airplane/airplane';
 import { TrainComponent } from './train/train';
 import { InterairComponent } from './interair/interair';
+import { CitySelectorComponent } from './city-selector/city-selector';
 @NgModule({
     declarations: [
         HotelComponent,
         TravelerComponent,
         AirplaneComponent,
         TrainComponent,
-        InterairComponent
+        InterairComponent,
+        CitySelectorComponent,
     ],
     imports: [],
     exports: [
@@ -18,14 +20,16 @@ import { InterairComponent } from './interair/interair';
         TravelerComponent,
         AirplaneComponent,
         TrainComponent,
-        InterairComponent
+        InterairComponent,
+        CitySelectorComponent,
     ],
     entryComponents: [
         HotelComponent,
         AirplaneComponent,
         TravelerComponent,
         TrainComponent,
-        InterairComponent
+        InterairComponent,
+        CitySelectorComponent,
     ]
 })
 export class ComponentsModule { }

@@ -8,6 +8,14 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { RestangularModule } from 'ngx-restangular';
 import { MyApp } from './app.component';
 import { CalendarModule } from "ion2-calendar";
+import {
+    CityListPageModule,
+    HomePageModule,
+    InquirePageModule,
+    MainPageModule,
+    OrderPageModule,
+    PersonPageModule
+} from './../pages/pages.index';
 @NgModule({
     declarations: [
         MyApp,
@@ -18,6 +26,12 @@ import { CalendarModule } from "ion2-calendar";
         CalendarModule,
         IonicPageModule,
         ComponentsModule,
+        CityListPageModule,
+        HomePageModule,
+        InquirePageModule,
+        MainPageModule,
+        OrderPageModule,
+        PersonPageModule,
         IonicModule.forRoot(MyApp, {
             backButtonText: '',
             iconMode: 'ios',

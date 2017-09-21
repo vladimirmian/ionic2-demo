@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>选择城市</ion-title>
+    </ion-navbar>
+    <ion-toolbar>
+        <ion-segment [(ngModel)]="cityType" color="primary">
+            <ion-segment-button value="inland">
+                国内城市
+            </ion-segment-button>
+            <ion-segment-button value="outdoor">
+                国际城市
+            </ion-segment-button>
+        </ion-segment>
+    </ion-toolbar>
+    <ion-toolbar>
+        <!-- (ionInput)="onInput($event)" (ionCancel)="onCancel($event)" -->
+        <ion-searchbar [(ngModel)]="myInput" [showCancelButton]="true"></ion-searchbar>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+
+</ion-content>

@@ -1,4 +1,14 @@
 <!-- Generated template for the AirplaneComponent component -->
-<div>
-  {{text}}
+<div class="airplane-panel">
+    <div class="select-city">
+        <div>
+            <h4>选择城市</h4>
+            <city-selector [selectType]="'single'"></city-selector>
+        </div>
+        <hr>
+        <div class="tr">
+            <h4>选择城市</h4>
+            <city-selector></city-selector>
+        </div>
+    </div>
 </div>
