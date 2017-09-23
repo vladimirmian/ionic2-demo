@@ -27,11 +27,7 @@
                     <h3>{{tripData['back']}}</h3>
                 </div>
             </ion-list-header>
-
-            <ion-item (click)="addTraveler()">
-                <ion-label>添加出行人</ion-label>
-                <ion-icon name="add-circle" class="blue-125" item-end></ion-icon>
-            </ion-item>
+            <traveler-add></traveler-add>
         </ion-list>
         <button ion-button block>搜索</button>
     </div>

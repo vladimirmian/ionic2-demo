@@ -1,0 +1,44 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>选择出行人</ion-title>
+    </ion-navbar>
+
+    <ion-toolbar>
+        <ion-segment [(ngModel)]="travalerType" color="primary">
+            <ion-segment-button value="system">
+                内部员工
+            </ion-segment-button>
+            <ion-segment-button value="temp">
+                临时出行人
+            </ion-segment-button>
+        </ion-segment>
+    </ion-toolbar>
+    <ion-toolbar>
+        <ion-searchbar [(ngModel)]="keyWord" [showCancelButton]="true" (ionInput)="onInput($event)" (ionCancel)="onCancel($event)" [placeholder]="'手机、姓名、邮箱'">
+        </ion-searchbar>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item-sliding *ngFor="let item of sysList;index as i">
+            <ion-item>
+                <ion-checkbox color="prime" checked="item.isSelect" item-start></ion-checkbox>
+                <ion-label>
+                    <h3>{{item.userName}}</h3>
+                    <h4>{{item.phone}}</h4>
+                </ion-label>
+                <ion-icon name="arrow-forward" class="black-100" item-end></ion-icon>
+            </ion-item>
+            <ion-item-options side="right">
+                <button ion-button color="primary"><ion-icon name="eye-outline"></ion-icon>查看</button>
+                <button ion-button color="secondary"><ion-icon name="cog"></ion-icon>编辑</button>
+            </ion-item-options>
+        </ion-item-sliding>
+    </ion-list>
+</ion-content>
+<ion-footer>
+    <ion-toolbar>
+        <button ion-button block (click)="confirm()">确定</button>
+    </ion-toolbar>
+</ion-footer>
