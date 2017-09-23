@@ -1,14 +1,37 @@
 <!-- Generated template for the AirplaneComponent component -->
 <div class="airplane-panel">
-    <div class="select-city">
-        <div>
-            <h4>选择城市</h4>
-            <city-selector [selectType]="'single'"></city-selector>
-        </div>
-        <hr>
-        <div class="tr">
-            <h4>选择城市</h4>
-            <city-selector></city-selector>
-        </div>
+    <div class="panel-list">
+        <ion-list noborder>
+            <ion-list-header class="select-city">
+                <div>
+                    <h4>选择城市</h4>
+                    <city-selector (Selection)="changeCity('depart',$event)"></city-selector>
+                </div>
+                <ion-icon name="swap"></ion-icon>
+                <div class="tr">
+                    <h4>选择城市</h4>
+                    <city-selector (Selection)="changeCity('arrive',$event)"></city-selector>
+                </div>
+            </ion-list-header>
+            <ion-item>
+                <ion-label>是否往返</ion-label>
+                <ion-toggle [(ngModel)]="isRound"></ion-toggle>
+            </ion-item>
+            <ion-list-header class="select-city">
+                <div (click)="openCalendar('go')">
+                    <h4>选择出发时间</h4>
+                    <h3>{{tripData['go']}}</h3>
+                </div>
+                <div class="tr" (click)="openCalendar('back')" *ngIf="isRound">
+                    <h4>选择返程时间</h4>
+                    <h3>{{tripData['back']}}</h3>
+                </div>
+            </ion-list-header>
+
+            <ion-item>
+                <ion-label>添加出行人</ion-label>
+                <ion-icon name="add-circle" class="blue-125" item-end></ion-icon>
+            </ion-item>
+        </ion-list>
     </div>
 </div>

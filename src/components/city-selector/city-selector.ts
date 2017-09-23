@@ -1,5 +1,5 @@
 import { CityListPage } from './../../pages/city-list/city-list';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
 import { ModalController, NavController } from 'ionic-angular';
 /**
  * Generated class for the CitySelectorComponent component.
@@ -13,19 +13,24 @@ import { ModalController, NavController } from 'ionic-angular';
 })
 export class CitySelectorComponent implements OnInit {
     @Input() selectType: string; // 选择模式，double-双选，simgle-单选
+    @Output() Selection: EventEmitter<any> = new EventEmitter<any>();
+    private cityModal;
+    public city = '请选择城市';
     constructor(
         public navCtrl: NavController,
         public modalCtrl: ModalController
     ) {
         console.log(this.selectType);
+        this.cityModal = this.modalCtrl.create(CityListPage);
     }
     ngOnInit() {
-        //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-        //Add 'implements OnInit' to the class.
         console.log(this.selectType);
     }
     showCityList() {
-        // this.navCtrl.push('city-list');
-        this.modalCtrl.create(CityListPage).present();
+        this.cityModal.present();
+        this.cityModal.onDidDismiss(data => {
+            this.city = data.name;
+            this.Selection.emit(data);
+        });
     }
 }

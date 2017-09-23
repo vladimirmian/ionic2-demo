@@ -1,3 +1,4 @@
+import { IonicModule } from 'ionic-angular';
 import { NgModule } from '@angular/core';
 import { HotelComponent } from './hotel/hotel';
 import { TravelerComponent } from './traveler/traveler';
@@ -14,7 +15,9 @@ import { CitySelectorComponent } from './city-selector/city-selector';
         InterairComponent,
         CitySelectorComponent,
     ],
-    imports: [],
+    imports: [
+        IonicModule
+    ],
     exports: [
         HotelComponent,
         TravelerComponent,

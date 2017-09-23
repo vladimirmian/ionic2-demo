@@ -11,4 +11,13 @@ export class CommonService {
     getUserInfo(){
         return this.restangular.all('user/current').get('');
     }
+    /**
+     * 获取城市列表的数据
+     * 
+     * @returns 
+     * @memberof CommonService
+     */
+    getCityList(){
+        return this.restangular.all('common/citylist').get('');
+    }
 }

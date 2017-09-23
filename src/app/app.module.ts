@@ -8,7 +8,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { RestangularModule } from 'ngx-restangular';
 import { MyApp } from './app.component';
 import { CalendarModule } from "ion2-calendar";
-import {
+import { 
     CityListPageModule,
     HomePageModule,
     InquirePageModule,
@@ -16,6 +16,7 @@ import {
     OrderPageModule,
     PersonPageModule
 } from './../pages/pages.index';
+import { ThreeDeeTouch, ThreeDeeTouchQuickAction, ThreeDeeTouchForceTouch } from '@ionic-native/three-dee-touch';
 @NgModule({
     declarations: [
         MyApp,
