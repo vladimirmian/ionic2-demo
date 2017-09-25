@@ -1,4 +1,17 @@
-<ion-item (click)="showTravelerList()">
+<ion-item (click)="showTravelerList()" class="add-traveler">
     <ion-label>添加出行人</ion-label>
     <ion-icon name="add-circle" class="blue-125" item-end></ion-icon>
 </ion-item>
+<ion-list class="traveler-list">
+    <ion-item-sliding *ngFor="let item of travelerList;index as i">
+        <ion-item>
+            <ion-label>
+                <h3>{{item.userName}}</h3>
+                <h4>{{item.phone}}</h4>
+            </ion-label>
+        </ion-item>
+        <ion-item-options side="right">
+            <button ion-button color="danger" (click)="deleteTraveler(item)"><ion-icon name="alert"></ion-icon>删除</button>
+        </ion-item-options>
+    </ion-item-sliding>
+</ion-list>

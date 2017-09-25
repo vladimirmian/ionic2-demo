@@ -1,5 +1,6 @@
+import { CityListPage } from './../city-list/city-list';
 import { Component } from '@angular/core';
-import { IonicPage, NavController } from 'ionic-angular';
+import { IonicPage, NavController, ModalController } from 'ionic-angular';
 
 /**
  * Generated class for the MainPage tabs.
@@ -9,21 +10,20 @@ import { IonicPage, NavController } from 'ionic-angular';
  */
 
 @IonicPage({
-    name:'main',
-    segment:'main'
+    name: 'main',
+    segment: 'main'
 })
 @Component({
-  selector: 'page-main',
-  templateUrl: 'main.html'
+    selector: 'page-main',
+    templateUrl: 'main.html'
 })
 export class MainPage {
 
-  homeRoot = 'HomePage'
-  inquireRoot = 'InquirePage'
-  orderRoot = 'OrderPage'
-  personRoot = 'PersonPage'
+    homeRoot = 'HomePage'
+    inquireRoot = 'InquirePage'
+    orderRoot = 'OrderPage'
+    personRoot = 'PersonPage'
 
 
-  constructor(public navCtrl: NavController) {}
-
+    constructor(public navCtrl: NavController, private modalCtrl: ModalController) { }
 }

@@ -1,3 +1,12 @@
 traveler-add {
-
+    .add-traveler.item-block {
+        margin-bottom: 0 !important;
+        border-bottom: 1px solid #000;
+    }
+    .traveler-list {
+        .item-block {
+            padding-left: 1rem !important;
+            margin-bottom: 0 !important;
+        }
+    }
 }

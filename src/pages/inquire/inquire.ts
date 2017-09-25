@@ -1,18 +1,17 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-inquire',
-  templateUrl: 'inquire.html',
+    selector: 'page-inquire',
+    templateUrl: 'inquire.html',
 })
 export class InquirePage {
-    public appType:string = 'airplane';
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+    public appType: string = 'airplane';
+    constructor(public navCtrl: NavController, public navParams: NavParams) {
+    }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad InquirePage');
-  }
-
+    ionViewDidLoad() {
+        console.log('ionViewDidLoad InquirePage');
+    }
 }

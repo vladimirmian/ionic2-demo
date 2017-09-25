@@ -10,9 +10,7 @@ import { RESTSTATUS } from './../../global/constant';
  * Ionic pages and navigation.
  */
 
-@IonicPage({
-    name: 'city-list'
-})
+@IonicPage()
 @Component({
     selector: 'page-city-list',
     templateUrl: 'city-list.html',

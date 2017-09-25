@@ -8,9 +8,7 @@ export class TipService {
         private toastCtrl: ToastController,
         private loadingCtrl: LoadingController
     ) {
-        this.load = this.loadingCtrl.create({
-            content: '请等待'
-        });
+        
     }
     /**
      * 显示loading
@@ -18,6 +16,9 @@ export class TipService {
      * @memberof TipService
      */
     showLoading() {
+        this.load = this.loadingCtrl.create({
+            content: '请等待'
+        });
         this.load.present();
     }
     /**

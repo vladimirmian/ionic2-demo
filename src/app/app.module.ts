@@ -1,3 +1,4 @@
+import { TestPageModule } from './../pages/test/test.module';
 import { ComponentsModule } from './../components/components.module';
 import { GlobalModule } from './../global/global.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -24,6 +25,7 @@ import { ThreeDeeTouch, ThreeDeeTouchQuickAction, ThreeDeeTouchForceTouch } from
     imports: [
         BrowserModule,
         GlobalModule,
+        TestPageModule,
         CalendarModule,
         IonicPageModule,
         ComponentsModule,

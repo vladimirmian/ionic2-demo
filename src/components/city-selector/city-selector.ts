@@ -21,12 +21,12 @@ export class CitySelectorComponent implements OnInit {
         public modalCtrl: ModalController
     ) {
         console.log(this.selectType);
-        this.cityModal = this.modalCtrl.create(CityListPage);
     }
     ngOnInit() {
         console.log(this.selectType);
     }
     showCityList() {
+        this.cityModal = this.modalCtrl.create(CityListPage);
         this.cityModal.present();
         this.cityModal.onDidDismiss(data => {
             this.city = data.name;

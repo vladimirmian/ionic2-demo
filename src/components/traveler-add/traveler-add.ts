@@ -1,6 +1,7 @@
 import { TravelerListComponent } from './../traveler-list/traveler-list';
 import { ModalController } from 'ionic-angular';
 import { Component } from '@angular/core';
+import * as _ from 'lodash';
 
 /**
  * Generated class for the TravelerAddComponent component.
@@ -14,6 +15,7 @@ import { Component } from '@angular/core';
 })
 export class TravelerAddComponent {
     private listModal;
+    public travelerList: Array<any> = [];
     constructor(
         private modalCtrl: ModalController
     ) {
@@ -27,7 +29,18 @@ export class TravelerAddComponent {
         this.listModal = this.modalCtrl.create(TravelerListComponent, params);
         this.listModal.present();
         this.listModal.onDidDismiss(data => {
-            console.log(data);
+            if (data && data.length !== 0) {
+                data.forEach(ele => {
+                    this.travelerList.push(ele);
+                });
+            }
+            console.log(this.travelerList)
         });
+    }
+    manageTraveler() {
+
+    }
+    deleteTraveler(item) {
+        this.travelerList = _.without(this.travelerList, item);
     }
 }

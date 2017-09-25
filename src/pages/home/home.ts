@@ -1,5 +1,6 @@
+import { TestPage } from './../test/test';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 
 /**
  * Generated class for the HomePage page.
@@ -10,16 +11,20 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html',
+    selector: 'page-home',
+    templateUrl: 'home.html',
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+    constructor(public navCtrl: NavController, public navParams: NavParams, private modalCtrl: ModalController) {
+    }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad HomePage');
-  }
+    ionViewDidLoad() {
+        console.log('ionViewDidLoad HomePage');
+    }
 
+    test() {
+        let modal = this.modalCtrl.create(TestPage);
+        modal.present();
+    }
 }

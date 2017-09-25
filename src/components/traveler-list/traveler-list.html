@@ -20,10 +20,14 @@
 </ion-header>
 
 <ion-content>
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content pullingIcon="arrow-down" pullingText="下拉刷新" refreshingSpinner="circles" refreshingText="正在刷新">
+        </ion-refresher-content>
+    </ion-refresher>
     <ion-list>
         <ion-item-sliding *ngFor="let item of sysList;index as i">
             <ion-item>
-                <ion-checkbox color="prime" checked="item.isSelect" item-start></ion-checkbox>
+                <ion-checkbox color="prime" checked="item.isSelect" [(ngModel)]="item.isSelect" (ionChange)="selectTravaler(item)" item-start></ion-checkbox>
                 <ion-label>
                     <h3>{{item.userName}}</h3>
                     <h4>{{item.phone}}</h4>
@@ -36,6 +40,9 @@
             </ion-item-options>
         </ion-item-sliding>
     </ion-list>
+    <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+        <ion-infinite-scroll-content></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
 </ion-content>
 <ion-footer>
     <ion-toolbar>
