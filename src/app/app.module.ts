@@ -1,3 +1,4 @@
+import { AirplaneListPageModule } from './../pages/airplane-list/airplane-list.module';
 import { TestPageModule } from './../pages/test/test.module';
 import { ComponentsModule } from './../components/components.module';
 import { GlobalModule } from './../global/global.module';
@@ -35,6 +36,7 @@ import { ThreeDeeTouch, ThreeDeeTouchQuickAction, ThreeDeeTouchForceTouch } from
         MainPageModule,
         OrderPageModule,
         PersonPageModule,
+        AirplaneListPageModule,
         IonicModule.forRoot(MyApp, {
             backButtonText: '',
             iconMode: 'ios',

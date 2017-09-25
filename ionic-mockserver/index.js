@@ -11,10 +11,12 @@ const user = require('./route/userInfo/userinfo');
 const login = require('./route/userInfo/login');
 const common = require('./route/common/city.list');
 const traveler = require('./route/traveler/traveler');
+const airTicket = require('./route/airTicket/airTicket');
 app.use('/login', login);
 app.use('/user', user);
 app.use('/common', common);
 app.use('/traveler', traveler);
+app.use('/airTicket', airTicket);
 /**
  * 跨域处理
  */

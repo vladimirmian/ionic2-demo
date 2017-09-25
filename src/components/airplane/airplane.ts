@@ -1,3 +1,4 @@
+import { NavController } from 'ionic-angular';
 import { Component } from '@angular/core';
 import { CalendarController } from "ion2-calendar/dist";
 /**
@@ -19,7 +20,8 @@ export class AirplaneComponent {
     text: string;
 
     constructor(
-        private calendarCtrl: CalendarController
+        private calendarCtrl: CalendarController,
+        private navCtrl:NavController
     ) {
         console.log('Hello AirplaneComponent Component');
         this.text = 'Hello World';
@@ -32,5 +34,8 @@ export class AirplaneComponent {
             console.log(_);
             this.tripData[type] = _.string;
         });
+    }
+    search(){
+        this.navCtrl.push('airplanelist');
     }
 }
