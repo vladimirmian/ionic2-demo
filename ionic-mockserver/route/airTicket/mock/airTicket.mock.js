@@ -12,10 +12,10 @@ let inland = function() {
                 return Random.natural(1000, 3000);
             }, //航班ID
             flightNum: function() {
-                return Random.word(2, 5) + Random.natural(1000, 3000);
+                return Random.word(2, 3).toUpperCase() + Random.natural(1000, 3000);
             }, //航班号
             flightType: function() {
-                return Random.word(2, 5) + '机';
+                return Random.cword(2, 5).toUpperCase() + '机';
             }, //飞机型号
             'airLineCompany|5': [function() {
                 return Random.cword(5, 7) + '公司'

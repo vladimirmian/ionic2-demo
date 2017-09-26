@@ -13,6 +13,28 @@
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content class="airplane-list-panel">
+    <ion-card *ngFor="let item of airplaneList;index as i">
+        <ion-card-content>
+            <ion-card-title>
+                <ion-grid>
+                    <ion-row>
+                        <ion-col col-5>
+                            <h4>宝安机场</h4>
+                            <h5>20：30</h5>
+                        </ion-col>
+                        <ion-col col-2 class="tc">
+                            <p>中转</p>
+                            <hr>
+                        </ion-col>
+                        <ion-col col-5 class="tr">
+                            <h4>首都国际机场</h4>
+                            <h5>20：30</h5>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </ion-card-title>
+            <p>{{item.flightNum}}&nbsp;飞行{{item.flightInformation.spendTime | date:"HH:mm"}}&nbsp;{{item.flightType}}<span class="red-100 fr">￥{{item.price}}</span></p>
+        </ion-card-content>
+    </ion-card>
 </ion-content>
