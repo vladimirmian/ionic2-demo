@@ -18,6 +18,7 @@ import { RESTSTATUS } from './../../global/constant';
     templateUrl: 'airplane-list.html',
 })
 export class AirplaneListPage {
+    public orderTye = 'default';
     public title;
     public airplaneList: Array<any> = [];
     constructor(
@@ -45,5 +46,9 @@ export class AirplaneListPage {
         }, err => {
             this.tipCtrl.closeLoading();
         });
+    }
+
+    _orderType(){
+        console.log(this.orderTye);
     }
 }

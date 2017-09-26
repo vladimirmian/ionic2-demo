@@ -1,15 +1,28 @@
-<!--
-  Generated template for the AirplaneListPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
-    <ion-navbar>
+    <ion-toolbar>
         <ion-title>{{title}}</ion-title>
-    </ion-navbar>
-
+        <ion-buttons end>
+            <button ion-button icon-only>
+                  <ion-icon name="more"></ion-icon>
+                </button>
+        </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar no-border-top>
+        <ion-segment [(ngModel)]="orderTye" (ngModelChange)="_orderType()">
+            <ion-segment-button value="default">
+                默认排序
+            </ion-segment-button>
+            <ion-segment-button value="price">
+                价格
+            </ion-segment-button>
+            <ion-segment-button value="departtime">
+                起飞时间
+            </ion-segment-button>
+            <ion-segment-button value="love">
+                好评度
+            </ion-segment-button>
+        </ion-segment>
+    </ion-toolbar>
 </ion-header>
 
 
@@ -24,7 +37,7 @@
                             <h5>20：30</h5>
                         </ion-col>
                         <ion-col col-2 class="tc">
-                            <p>中转</p>
+                            <p>{{item.flightInformation.spendTime | date:"HH:mm"}}</p>
                             <hr>
                         </ion-col>
                         <ion-col col-5 class="tr">
@@ -34,7 +47,7 @@
                     </ion-row>
                 </ion-grid>
             </ion-card-title>
-            <p>{{item.flightNum}}&nbsp;飞行{{item.flightInformation.spendTime | date:"HH:mm"}}&nbsp;{{item.flightType}}<span class="red-100 fr">￥{{item.price}}</span></p>
+            <p>{{item.flightNum}}&nbsp;&nbsp;{{item.flightType}}<span class="red-100 fr">￥{{item.price}}</span></p>
         </ion-card-content>
     </ion-card>
 </ion-content>
