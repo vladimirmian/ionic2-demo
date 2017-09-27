@@ -35,6 +35,9 @@ export class AirplaneListPage {
         console.log('ionViewDidLoad AirplaneListPage');
         this.getList();
     }
+    back(){
+        this.navCtrl.pop();
+    }
 
     getList() {
         this.tipCtrl.showLoading();

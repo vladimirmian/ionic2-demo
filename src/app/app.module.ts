@@ -14,7 +14,6 @@ import {
     CityListPageModule,
     HomePageModule,
     InquirePageModule,
-    MainPageModule,
     OrderPageModule,
     PersonPageModule
 } from './../pages/pages.index';
@@ -33,7 +32,6 @@ import { ThreeDeeTouch, ThreeDeeTouchQuickAction, ThreeDeeTouchForceTouch } from
         CityListPageModule,
         HomePageModule,
         InquirePageModule,
-        MainPageModule,
         OrderPageModule,
         PersonPageModule,
         AirplaneListPageModule,

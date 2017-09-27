@@ -4,7 +4,7 @@
     </ion-navbar>
     <ion-toolbar no-border-top>
         <ion-segment [(ngModel)]="appType">
-            <ion-segment-button value="airplane">
+            <ion-segment-button value="inland">
                 国内机票
             </ion-segment-button>
             <ion-segment-button value="interair">
@@ -22,7 +22,7 @@
 
 
 <ion-content padding>
-    <airplane *ngIf="appType == 'airplane'"></airplane>
+    <airplane *ngIf="appType == 'inland'"></airplane>
     <interair *ngIf="appType == 'interair'"></interair>
     <hotel *ngIf="appType == 'hotel'"></hotel>
     <train *ngIf="appType == 'train'"></train>
