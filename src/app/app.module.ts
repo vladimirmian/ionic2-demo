@@ -15,7 +15,8 @@ import {
     HomePageModule,
     InquirePageModule,
     OrderPageModule,
-    PersonPageModule
+    PersonPageModule,
+    HotelPageModule
 } from './../pages/pages.index';
 import { ThreeDeeTouch, ThreeDeeTouchQuickAction, ThreeDeeTouchForceTouch } from '@ionic-native/three-dee-touch';
 @NgModule({
@@ -35,6 +36,7 @@ import { ThreeDeeTouch, ThreeDeeTouchQuickAction, ThreeDeeTouchForceTouch } from
         OrderPageModule,
         PersonPageModule,
         AirplaneListPageModule,
+        HotelPageModule,
         IonicModule.forRoot(MyApp, {
             backButtonText: '',
             iconMode: 'ios',

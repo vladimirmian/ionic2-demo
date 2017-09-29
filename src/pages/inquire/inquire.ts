@@ -9,10 +9,10 @@ import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angu
     templateUrl: 'inquire.html',
 })
 export class InquirePage {
-    public appType: string = 'inland';
+    public appType: string = 'hotel';
     constructor(public navCtrl: NavController, public navParams: NavParams) {
         console.log(this.navParams);
-        this.appType = this.navParams.data.type;
+        // this.appType = this.navParams.data.type;
     }
 
     ionViewDidLoad() {

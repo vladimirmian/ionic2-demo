@@ -1,5 +1,5 @@
-<ion-header>
-    <ion-toolbar>
+<ion-header color="primary">
+    <ion-toolbar color="primary">
         <ion-buttons start>
             <button ion-button icon-only (click)="back()"><ion-icon name="arrow-back-outline"></ion-icon></button>
         </ion-buttons>
@@ -8,7 +8,7 @@
             <button ion-button icon-only><ion-icon name="more"></ion-icon></button>
         </ion-buttons>
     </ion-toolbar>
-    <ion-toolbar no-border-top>
+    <ion-toolbar>
         <ion-segment [(ngModel)]="orderTye" (ngModelChange)="_orderType()">
             <ion-segment-button value="default">
                 默认排序

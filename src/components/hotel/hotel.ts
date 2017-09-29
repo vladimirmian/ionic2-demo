@@ -1,4 +1,6 @@
+import { NavController } from 'ionic-angular';
 import { Component } from '@angular/core';
+import { CalendarController } from "ion2-calendar/dist";
 
 /**
  * Generated class for the HotelComponent component.
@@ -7,16 +9,33 @@ import { Component } from '@angular/core';
  * Components.
  */
 @Component({
-  selector: 'hotel',
-  templateUrl: 'hotel.html'
+    selector: 'hotel',
+    templateUrl: 'hotel.html'
 })
 export class HotelComponent {
-
-  text: string;
-
-  constructor() {
-    console.log('Hello HotelComponent Component');
-    this.text = 'Hello World';
-  }
-
+    public timeStemp = {
+        from: '', to: ''
+    };
+    constructor(
+        private calendarCtrl: CalendarController,
+        private navCtrl: NavController
+    ) {
+        console.log('Hello HotelComponent Component');
+    }
+    changeCity(e) {
+        console.log(e)
+    }
+    openCalendar() {
+        this.calendarCtrl.openCalendar({
+            cssClass: 'my-class',
+            pickMode: 'range',
+        }).then(_ => {
+            console.log(_);
+            this.timeStemp.from = _.from.time;
+            this.timeStemp.to = _.to.time;
+        });
+    }
+    search() {
+        this.navCtrl.push('hotellist');
+    }
 }

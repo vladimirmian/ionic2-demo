@@ -1,2 +1,44 @@
 <!-- Generated template for the HotelComponent component -->
-<h1>1234234</h1>
+<ion-list>
+    <ion-item>
+        <ion-label>
+            <city-selector (Selection)="changeCity('depart',$event)"></city-selector>
+        </ion-label>
+        <button ion-button icon-only item-end clear>
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+        </button>
+    </ion-item>
+    <ion-item>
+        <ion-label (click)="openCalendar()">
+            <p *ngIf="!timeStemp.from">入住日期</p>
+            <p *ngIf="timeStemp.from" class="black-125">
+                {{timeStemp.from | date:"yyyy-MM-dd"}}
+                <ion-icon name="remove"></ion-icon>
+                {{timeStemp.to | date:"yyyy-MM-dd"}}，共{{timeStemp.to - timeStemp.from | date:'dd'}}晚
+            </p>
+        </ion-label>
+        <button ion-button icon-only item-end clear>
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+            </button>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>
+            <p>关键词/酒店名/位置/品牌</p>
+        </ion-label>
+        <button ion-button icon-only item-end clear>
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+            </button>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>
+            <p>价格</p>
+        </ion-label>
+        <button ion-button icon-only item-end clear>
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+            </button>
+    </ion-item>
+    <traveler-add></traveler-add>
+</ion-list>
+<button ion-button full (click)="search()">搜索酒店</button>
