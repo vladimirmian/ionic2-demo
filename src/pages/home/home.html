@@ -1,20 +1,41 @@
-<ion-header>
+<ion-header no-border>
 
-    <ion-toolbar>
-        <ion-buttons start>
-            <button ion-button icon-only><ion-icon name="ionitron-outline"></ion-icon></button>
+    <ion-toolbar class="main-header">
+        <ion-buttons center>
+            <div class="main-message">
+                <em class="iconfont icon-message-o ft12"></em>
+                <div>消息展示</div>
+                <!-- <em>查看</em> -->
+            </div>
         </ion-buttons>
-        <ion-title>欢迎回来，大傻逼</ion-title>
-        <ion-buttons end>
+        <!-- <ion-buttons end>
             <button ion-button icon-only><ion-icon name="more"></ion-icon></button>
-        </ion-buttons>
+        </ion-buttons> -->
     </ion-toolbar>
 
 </ion-header>
 
 
 <ion-content class="card-background-page">
-    <ion-card class="orange" (click)="gotoInquire('inland')">
+    <div class="inquire-content">
+        <div>
+            <span class="iconfont icon-plane"></span>
+            <p>国内机票</p>
+        </div>
+        <div>
+            <span class="iconfont icon-international-plane-"></span>
+            <p>国际机票</p>
+        </div>
+        <div>
+            <span class="iconfont icon-hotel"></span>
+            <p>酒店预订</p>
+        </div>
+        <div>
+            <span class="iconfont icon-train"></span>
+            <p>火车票</p>
+        </div>
+    </div>
+    <!-- <ion-card class="orange" (click)="gotoInquire('inland')">
         <img src="assets/bg-inland.png" />
         <div class="card-title">国内机票</div>
     </ion-card>
@@ -29,7 +50,7 @@
     <ion-card class="blue" (click)="gotoInquire('hotel')">
         <img src="assets/bg-hotel.png" />
         <div class="card-title">酒店</div>
-    </ion-card>
+    </ion-card> -->
     <!-- <ion-grid>
         <ion-row>
             <ion-col col-6>

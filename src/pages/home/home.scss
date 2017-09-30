@@ -1,4 +1,29 @@
+@import './../../global/styles/_var.scss';
 page-home {
+    .main-header {
+        .toolbar-background-ios {
+            background-color: $blue-100;
+        }
+        .main-message {
+            position: relative;
+            border-radius: 50px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.3);
+            em {
+                position: absolute;
+                font-style: normal;
+                top: 50%;
+                margin-top: -14px;
+                left: 10px;
+            }
+            >div {
+                padding: 0 20px 0 16px;
+            }
+        }
+    }
     ion-content {
         // background-color: #3cc9fd;
     }
