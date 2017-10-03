@@ -17,68 +17,61 @@
 
 
 <ion-content class="card-background-page">
-    <div class="inquire-content">
-        <div>
-            <span class="iconfont icon-plane"></span>
-            <p>国内机票</p>
+    <div ion-fixed>
+        <div class="inquire-content">
+            <div>
+                <span class="iconfont icon-plane airplane "></span>
+                <p>国内机票</p>
+            </div>
+            <div>
+                <span class="iconfont icon-international-plane- inter "></span>
+                <p>国际机票</p>
+            </div>
+            <div>
+                <span class="iconfont icon-hotel hotel "></span>
+                <p>酒店预订</p>
+            </div>
+            <div>
+                <span class="iconfont icon-train train "></span>
+                <p>火车票</p>
+            </div>
         </div>
-        <div>
-            <span class="iconfont icon-international-plane-"></span>
-            <p>国际机票</p>
-        </div>
-        <div>
-            <span class="iconfont icon-hotel"></span>
-            <p>酒店预订</p>
-        </div>
-        <div>
-            <span class="iconfont icon-train"></span>
-            <p>火车票</p>
-        </div>
+        <ion-list class="mt10 ">
+            <ion-item>
+                <ion-icon name="list-box" item-start class="orange-100"></ion-icon>
+                <ion-label>
+                    <h3>我的订单</h3>
+                    <p>机票、酒店、火车票订单列表</p>
+                </ion-label>
+                <ion-icon name="arrow-forward" item-end class="black-75"></ion-icon>
+            </ion-item>
+            <ion-item>
+                <ion-icon name="pricetags" item-start class="blue-100"></ion-icon>
+                <ion-label>
+                    <h3>待我审批</h3>
+                    <p>审批出行订单</p>
+                </ion-label>
+                <ion-icon name="arrow-forward" item-end class="black-75"></ion-icon>
+            </ion-item>
+        </ion-list>
+        <ion-list>
+            <ion-item>
+                <ion-icon name="person" item-start class="black-100"></ion-icon>
+                <ion-label>
+                    <h3>个人中心</h3>
+                    <p>编辑资料，修改密码</p>
+                </ion-label>
+                <ion-icon name="arrow-forward" item-end class="black-75"></ion-icon>
+            </ion-item>
+            <ion-item>
+                <ion-icon name="help-circle" item-start class="black-100"></ion-icon>
+                <ion-label>
+                    <h3>帮助中心</h3>
+                    <p>有问题找帮主</p>
+                </ion-label>
+                <ion-icon name="arrow-forward" item-end class="black-75"></ion-icon>
+            </ion-item>
+        </ion-list>
     </div>
-    <!-- <ion-card class="orange" (click)="gotoInquire('inland')">
-        <img src="assets/bg-inland.png" />
-        <div class="card-title">国内机票</div>
-    </ion-card>
-    <ion-card class="blue" (click)="gotoInquire('interair')">
-        <img src="assets/bg-inter.png" />
-        <div class="card-title">国际机票</div>
-    </ion-card>
-    <ion-card class="orange" (click)="gotoInquire('train')">
-        <img src="assets/bg-train.png" />
-        <div class="card-title">火车票</div>
-    </ion-card>
-    <ion-card class="blue" (click)="gotoInquire('hotel')">
-        <img src="assets/bg-hotel.png" />
-        <div class="card-title">酒店</div>
-    </ion-card> -->
-    <!-- <ion-grid>
-        <ion-row>
-            <ion-col col-6>
-                <ion-card>
-                    <img src="assets/bg-inland.png" />
-                    <div class="card-title">国内机票</div>
-                </ion-card>
-            </ion-col>
-            <ion-col col-6>
-                <ion-card>
-                    <img src="assets/bg-inter.png" />
-                    <div class="card-title">国际机票</div>
-                </ion-card>
-            </ion-col>
-        </ion-row>
-        <ion-row>
-            <ion-col col-6>
-                <ion-card>
-                    <img src="assets/bg-hotel.png" />
-                    <div class="card-title">酒店</div>
-                </ion-card>
-            </ion-col>
-            <ion-col col-6>
-                <ion-card>
-                    <img src="assets/bg-train.png" />
-                    <div class="card-title">火车票</div>
-                </ion-card>
-            </ion-col>
-        </ion-row>
-    </ion-grid> -->
+
 </ion-content>
