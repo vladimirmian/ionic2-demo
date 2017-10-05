@@ -1,3 +1,72 @@
+@import './../../global/styles/_var.scss';
 interair {
-
+    .airplane-bg {
+        margin-bottom: -145px;
+    }
+    .panel-list {
+        position: relative;
+        margin: 0 20px;
+        .round-trip {
+            height: 30px;
+            line-height: 30px;
+            font-size: 0;
+            span {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 14px;
+                height: 30px;
+                width: 130px;
+                color: $black-100;
+                background-image: url('../assets/icon/slide-off.png');
+                background-position: center;
+                background-size: contain;
+                text-align: center;
+                &.active {
+                    z-index: 1;
+                    background-image: url('../assets/icon/slide-on.png');
+                    color: $blue-125;
+                }
+                &:last-child {
+                    margin-left: -54px;
+                }
+            }
+        }
+        .trip-block {
+            padding: 10px;
+            border-radius: 6px;
+            background-color: #fff;
+        }
+        .city-select {
+            display: flex;
+            align-items: center;
+            city-selector {
+                flex: 3;
+            }
+            >div {
+                flex: 1;
+                position: relative;
+                height: 30px;
+                span {
+                    position: absolute;
+                    left: 50%;
+                    margin-left: -15px;
+                    font-size: 30px;
+                }
+            }
+        }
+        .time-select {
+            display: flex;
+            margin-top: 26px;
+            >div {
+                flex: 1;
+                width: 100%;
+                font-size: 16px;
+                line-height: 30px;
+            }
+        }
+    }
+    .button {
+        margin-top: 80px;
+    }
 }

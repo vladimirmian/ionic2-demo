@@ -20,9 +20,27 @@
     </ion-toolbar> -->
 </ion-header>
 
-<ion-content class="inquire-panel inland">
+<ion-content class="inquire-panel">
+
     <airplane *ngIf="appType == 'inland'"></airplane>
     <interair *ngIf="appType == 'interair'"></interair>
     <hotel *ngIf="appType == 'hotel'"></hotel>
     <train *ngIf="appType == 'train'"></train>
+    <ion-fab bottom right>
+        <button ion-fab><em class="iconfont icon-menu"></em></button>
+        <ion-fab-list side="left">
+            <button ion-fab (click)="appType = 'inland'">
+                <em class="iconfont icon-plane blue-125"></em>
+            </button>
+            <button ion-fab (click)="appType = 'interair'">
+                <em class="iconfont icon-international-plane- blue-125"></em>
+            </button>
+            <button ion-fab (click)="appType = 'hotel'">
+                <em class="iconfont icon-hotel blue-125"></em>
+            </button>
+            <button ion-fab (click)="appType = 'train'">
+                <em class="iconfont icon-train blue-125"></em>
+            </button>
+        </ion-fab-list>
+    </ion-fab>
 </ion-content>

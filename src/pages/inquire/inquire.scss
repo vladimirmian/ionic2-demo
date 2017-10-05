@@ -20,12 +20,10 @@ page-inquire {
     img {
         object-fit: contain;
     }
-    &.inland {
-        background: -moz-linear-gradient(#2e6ce1, #95bcfe);
-        background: -webkit-linear-gradient(#2e6ce1, #95bcfe);
-        background: -o-linear-gradient(#2e6ce1, #95bcfe);
-        background: linear-gradient(#2e6ce1, #95bcfe);
-        background-repeat: no-repeat;
-        background-size: contain;
-    }
+    background: -moz-linear-gradient(#2e6ce1, #95bcfe);
+    background: -webkit-linear-gradient(#2e6ce1, #95bcfe);
+    background: -o-linear-gradient(#2e6ce1, #95bcfe);
+    background: linear-gradient(#2e6ce1, #95bcfe);
+    background-repeat: no-repeat;
+    background-size: contain;
 }
