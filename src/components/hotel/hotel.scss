@@ -1,5 +1,37 @@
+@import './../../global/styles/_var.scss';
 hotel {
-    .item-ios {
-        padding-left: 0;
+    .hotel-bg {
+        margin-bottom: -100px;
+    }
+    .panel-list {
+        position: relative;
+        margin: 0 20px;
+        .hotel-info {
+            border-radius: 6px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            >div {
+                position: relative;
+                height: 51px;
+                margin: 0 10px;
+                border-bottom: 1px solid $black-50;
+                line-height: 50px;
+                >em {
+                    position: absolute;
+                    top: 50%;
+                    right: 5px;
+                    margin-top: -25px;
+                    color: $black-100;
+                }
+                >span {
+                    &.time {
+                        color: $black-75;
+                    }
+                }
+            }
+        }
+    }
+    .button {
+        margin-top: 80px;
     }
 }

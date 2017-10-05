@@ -1,44 +1,30 @@
 <!-- Generated template for the HotelComponent component -->
-<ion-list>
-    <ion-item>
-        <ion-label>
-            <city-selector (Selection)="changeCity('depart',$event)"></city-selector>
-        </ion-label>
-        <button ion-button icon-only item-end clear>
-            <ion-icon name="arrow-forward-outline"></ion-icon>
-        </button>
-    </ion-item>
-    <ion-item>
-        <ion-label (click)="openCalendar()">
-            <p *ngIf="!timeStemp.from">入住日期</p>
-            <p *ngIf="timeStemp.from" class="black-125">
-                {{timeStemp.from | date:"yyyy-MM-dd"}}
-                <ion-icon name="remove"></ion-icon>
-                {{timeStemp.to | date:"yyyy-MM-dd"}}，共{{timeStemp.to - timeStemp.from | date:'dd'}}晚
-            </p>
-        </ion-label>
-        <button ion-button icon-only item-end clear>
-                <ion-icon name="arrow-forward-outline"></ion-icon>
-            </button>
-    </ion-item>
+<div class="hotel-panel" ion-fixed>
+    <img src="assets/hotel-bg.png" alt="" class="hotel-bg">
+    <div class="panel-list">
+        <div class="hotel-info">
+            <div>
+                <city-selector [placeholder]="'入住城市'" class="ft14"></city-selector>
+                <em class="iconfont icon-forward-o"></em>
+            </div>
+            <div>
+                <span class="time">入住时间</span>
+                <em class="iconfont icon-forward-o"></em>
+            </div>
 
-    <ion-item>
-        <ion-label>
-            <p>关键词/酒店名/位置/品牌</p>
-        </ion-label>
-        <button ion-button icon-only item-end clear>
-                <ion-icon name="arrow-forward-outline"></ion-icon>
-            </button>
-    </ion-item>
+            <div>
+                <span class="time">关键字/位置/酒店名</span>
+                <em class="iconfont icon-forward-o"></em>
+            </div>
 
-    <ion-item>
-        <ion-label>
-            <p>价格</p>
-        </ion-label>
-        <button ion-button icon-only item-end clear>
-                <ion-icon name="arrow-forward-outline"></ion-icon>
-            </button>
-    </ion-item>
-    <traveler-add></traveler-add>
-</ion-list>
-<button ion-button full (click)="search()">搜索酒店</button>
+            <div>
+                <span class="time">星级价格</span>
+                <em class="iconfont icon-forward-o"></em>
+            </div>
+        </div>
+        <traveler-add class="mt10"></traveler-add>
+    </div>
+    <div class="button orange mt30">
+        <span>搜索</span>
+    </div>
+</div>
