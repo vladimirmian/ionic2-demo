@@ -27,6 +27,14 @@ hotel {
                     &.time {
                         color: $black-75;
                     }
+                    &.date {
+                        color: $black-100;
+                        b {
+                            margin-left: 5px;
+                            font-size: 12px;
+                            font-weight: normal;
+                        }
+                    }
                 }
             }
         }

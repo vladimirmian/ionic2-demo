@@ -7,8 +7,12 @@
                 <city-selector [placeholder]="'入住城市'" class="ft14"></city-selector>
                 <em class="iconfont icon-forward-o"></em>
             </div>
-            <div>
-                <span class="time">入住时间</span>
+            <div (click)="openCalendar()">
+                <span class="time" *ngIf="!timeStemp.from">入住时间</span>
+                <span class="date" *ngIf="timeStemp.from">
+                    {{timeStemp.from | date:"MM月dd日"}}<b>入住</b>—{{timeStemp.to | date:"MM月dd日"}}<b>离店</b>
+                    <span class="ml10">共{{timeStemp.to - timeStemp.from | date:"d晚"}}</span>
+                </span>
                 <em class="iconfont icon-forward-o"></em>
             </div>
 
