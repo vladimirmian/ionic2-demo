@@ -2,7 +2,7 @@ import { TravelerListComponent } from './../traveler-list/traveler-list';
 import { ModalController } from 'ionic-angular';
 import { Component } from '@angular/core';
 import * as _ from 'lodash';
-
+import { CERTIFICATE } from './../../global/constant';
 /**
  * Generated class for the TravelerAddComponent component.
  *
@@ -15,6 +15,7 @@ import * as _ from 'lodash';
 })
 export class TravelerAddComponent {
     private listModal;
+    public CERTIFICATE = CERTIFICATE;
     public travelerList: Array<any> = [];
     constructor(
         private modalCtrl: ModalController

@@ -1,11 +1,38 @@
 traveler-add {
-    .add-traveler.item-block {
-        margin-bottom: 0 !important;
-    }
-    .traveler-list {
-        .item-block {
-            padding-left: 1rem !important;
-            margin-bottom: 0 !important;
+    .travler-block {
+        margin-top: 16px;
+        border-radius: 6px;
+        background-color: #fff;
+        padding: 10px;
+        header {
+            display: flex;
+            span {
+                display: block;
+                line-height: 26px;
+                flex: 1;
+            }
+        }
+        ul {
+            li {
+                line-height: 26px;
+                display: flex;
+                span,
+                b {
+                    color: $black-100;
+                    font-weight: normal;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+                span,
+                em {
+                    flex: 2;
+                }
+                b {
+                    flex: 6;
+                    text-align: center;
+                }
+            }
         }
     }
 }

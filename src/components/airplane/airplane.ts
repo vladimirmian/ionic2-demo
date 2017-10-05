@@ -12,6 +12,7 @@ import { CalendarController } from "ion2-calendar/dist";
     templateUrl: 'airplane.html'
 })
 export class AirplaneComponent {
+    public tripRound:Boolean = false; // 是否往返的
     public isRound:Boolean = false;
     public tripData = {
         go: '请选择出发时间',

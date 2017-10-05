@@ -3,8 +3,8 @@
     <img src="assets/airplane-bg.png" alt="" class="airplane-bg">
     <div class="panel-list">
         <div class="round-trip">
-            <span class="active">单程</span>
-            <span>往返</span>
+            <span [ngClass]="{'active':!tripRound}" (click)="tripRound = false">单程</span>
+            <span [ngClass]="{'active':tripRound}" (click)="tripRound = true;">往返</span>
         </div>
         <div class="trip-block">
             <div class="city-select">
@@ -16,9 +16,17 @@
                 <city-selector [placeholder]="'到达城市'" class="tr ft28"></city-selector>
             </div>
             <div class="time-select">
-                <div class="black-100">出发日期</div>
-                <div class="tr black-100">返程日期</div>
+                <div (click)="openCalendar('go')">
+                    <span class="black-100">出发日期</span>
+                </div>
+                <div class="tr" (click)="openCalendar('back')" *ngIf="tripRound">
+                    <span class="black-100">到达日期</span>
+                </div>
             </div>
         </div>
+        <traveler-add class="mt10"></traveler-add>
+    </div>
+    <div class="button orange mt30">
+        <span>搜索</span>
     </div>
 </div>

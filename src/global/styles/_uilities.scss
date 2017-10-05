@@ -8,6 +8,26 @@ $lg: 25px;
 $xlg: 30px;
 @import "./_var.scss";
 
+/*按钮*/
+
+.button {
+    text-align: center;
+    display: flex;
+    padding: 0 20px;
+    line-height: 40px;
+    span {
+        border-radius: 6px;
+        flex: 1;
+        color: #fff;
+    }
+    &.orange {
+        span {
+            background-color: $orange-100;
+        }
+    }
+}
+
+
 /*简易样式*/
 
 .tc {

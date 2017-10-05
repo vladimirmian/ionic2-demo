@@ -6,3 +6,11 @@ export enum RESTSTATUS {
     forbidden = 403,
     unprocessable = 522
 }
+
+export enum CERTIFICATE {
+    '身份证',
+    '护照',
+    '港澳通行证',
+    '香港身份证',
+    '回乡证'
+}

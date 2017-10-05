@@ -41,7 +41,9 @@ let traveler = function() {
                 lastName: function() {
                     return Random.clast();
                 },
-                'certificateType|+1': 0,
+                certificateType: function() {
+                    return Random.natural(0, 4)
+                },
                 certificateNumber: function() {
                     return Random.natural(10012345678, 90012345678);
                 }
