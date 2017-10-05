@@ -19,20 +19,20 @@
 <ion-content class="card-background-page">
     <div ion-fixed>
         <div class="inquire-content">
-            <div>
-                <span class="iconfont icon-plane airplane "></span>
+            <div (click)="gotoInquire('inland')">
+                <span class="iconfont icon-plane airplane"></span>
                 <p>国内机票</p>
             </div>
-            <div>
-                <span class="iconfont icon-international-plane- inter "></span>
+            <div (click)="gotoInquire('interair')">
+                <span class="iconfont icon-international-plane- inter"></span>
                 <p>国际机票</p>
             </div>
-            <div>
-                <span class="iconfont icon-hotel hotel "></span>
+            <div (click)="gotoInquire('hotel')">
+                <span class="iconfont icon-hotel hotel"></span>
                 <p>酒店预订</p>
             </div>
-            <div>
-                <span class="iconfont icon-train train "></span>
+            <div (click)="gotoInquire('train')">
+                <span class="iconfont icon-train train"></span>
                 <p>火车票</p>
             </div>
         </div>

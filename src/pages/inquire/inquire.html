@@ -1,8 +1,8 @@
 <ion-header>
     <ion-navbar>
-        <ion-title>产品查询</ion-title>
+        <ion-title>{{PRODUCTTYPE[appType]}}</ion-title>
     </ion-navbar>
-    <ion-toolbar no-border-top>
+    <!-- <ion-toolbar no-border-top>
         <ion-segment [(ngModel)]="appType">
             <ion-segment-button value="inland">
                 国内机票
@@ -17,11 +17,10 @@
                 订火车票
             </ion-segment-button>
         </ion-segment>
-    </ion-toolbar>
+    </ion-toolbar> -->
 </ion-header>
 
-
-<ion-content padding>
+<ion-content class="inquire-panel inland">
     <airplane *ngIf="appType == 'inland'"></airplane>
     <interair *ngIf="appType == 'interair'"></interair>
     <hotel *ngIf="appType == 'hotel'"></hotel>

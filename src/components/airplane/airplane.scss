@@ -1,57 +1,69 @@
 @import './../../global/styles/_var.scss';
-@mixin inblock() {
-    flex: 4;
-    font-size: 0;
-    h3,
-    h4 {
-        margin: 0 0 10px;
+airplane {
+    .airplane-bg {
+        margin-bottom: -145px;
     }
-    h3 {
-        font-size: $fz-16;
-        margin-bottom: 0;
-    }
-    h4 {
-        font-size: $fz-14;
-    }
-    ion-icon {
-        font-size: $fz-26;
-        color: $blue-125;
-        flex: 1;
-        text-align: center;
-    }
-    city-selector {
-        div {
-            font-size: $fz-16;
-            font-weight: normal;
-        }
-    }
-}
-
-airplane {}
-
-.airplane-panel {
     .panel-list {
-        .item-block {
-            padding: 0;
-            margin-bottom: 1.2rem;
+        position: relative;
+        margin: 0 20px;
+        .round-trip {
+            height: 30px;
+            line-height: 30px;
+            font-size: 0;
+            span {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 14px;
+                height: 30px;
+                width: 130px;
+                color: $black-100;
+                background-image: url('../assets/icon/slide-off.png');
+                background-position: center;
+                background-size: contain;
+                text-align: center;
+                &.active {
+                    z-index: 1;
+                    background-image: url('../assets/icon/slide-on.png');
+                    color: $blue-125;
+                }
+                &:last-child {
+                    margin-left: -54px;
+                }
+            }
         }
-    }
-    .select-city {
-        padding: 0 0 1.2rem;
-        .input-wrapper {
-            width: 100%;
+        .trip-block {
+            padding: 10px;
+            border-radius: 6px;
+            background-color: #fff;
         }
-        div {
-            @include inblock();
-        }
-        ion-label {
-            margin: 0;
+        .city-select {
             display: flex;
             align-items: center;
+            city-selector {
+                flex: 3;
+            }
+            >div {
+                flex: 1;
+                position: relative;
+                height: 30px;
+                span {
+                    position: absolute;
+                    left: 50%;
+                    margin-left: -15px;
+                    font-size: 30px;
+                }
+            }
         }
-        hr {
-            flex: 1;
-            align-items: center;
+        .time-select {
+            display: flex;
+            margin-top: 26px;
+            >div {
+                flex: 1;
+                width: 100%;
+                font-size: 16px;
+                line-height: 30px;
+            }
         }
     }
 }

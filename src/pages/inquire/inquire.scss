@@ -1,3 +1,31 @@
 page-inquire {
+    .title {
+        .toolbar-title {
+            color: #fff;
+            font-weight: normal;
+        }
+    }
+    .toolbar-ios:last-child .toolbar-background-ios {
+        border-bottom: 0;
+    }
+    .toolbar-background-ios {
+        background: none;
+    }
+}
 
+.inquire-panel {
+    .scroll-content {
+        margin-top: 0 !important;
+    }
+    img {
+        object-fit: contain;
+    }
+    &.inland {
+        background: -moz-linear-gradient(#2e6ce1, #95bcfe);
+        background: -webkit-linear-gradient(#2e6ce1, #95bcfe);
+        background: -o-linear-gradient(#2e6ce1, #95bcfe);
+        background: linear-gradient(#2e6ce1, #95bcfe);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
 }

@@ -12,10 +12,11 @@ import { ModalController, NavController } from 'ionic-angular';
     templateUrl: 'city-selector.html'
 })
 export class CitySelectorComponent implements OnInit {
+    @Input() placeholder:string; // 填充物
     @Input() selectType: string; // 选择模式，double-双选，simgle-单选
     @Output() Selection: EventEmitter<any> = new EventEmitter<any>();
     private cityModal;
-    public city = '请选择城市';
+    public city;
     constructor(
         public navCtrl: NavController,
         public modalCtrl: ModalController
