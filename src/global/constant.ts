@@ -14,3 +14,12 @@ export enum CERTIFICATE {
     '香港身份证',
     '回乡证'
 }
+export const WEEKSCN = {
+    Mon: '周一',
+    Tue: '周二',
+    Wed: '周三',
+    Thu: '周四',
+    Fri: '周五',
+    Sat: '周六',
+    Sun: '周日',
+}

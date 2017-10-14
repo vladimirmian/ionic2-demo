@@ -1,6 +1,7 @@
 import { NavController } from 'ionic-angular';
 import { Component } from '@angular/core';
 import { CalendarController } from "ion2-calendar/dist";
+import {WEEKSCN} from './../../global/constant';
 /**
  * Generated class for the TrainComponent component.
  *
@@ -13,6 +14,7 @@ import { CalendarController } from "ion2-calendar/dist";
 })
 export class TrainComponent {
     public timeStemp;
+    public weeksCn = WEEKSCN;
     constructor(
         private calendarCtrl: CalendarController,
         private navCtrl: NavController

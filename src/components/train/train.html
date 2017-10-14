@@ -6,17 +6,17 @@
                 <div class="city-select">
                     <city-selector [placeholder]="'出发城市'" class="ft18"></city-selector>
                     <div class="switch">
-                        <span class="iconfont icon-switches-plane-a blue-50"></span>
-                        <span class="iconfont icon-switches-plane-b blue-125"></span>
+                        <span class="iconfont icon-switches-b-o blue-50"></span>
                     </div>
                     <city-selector [placeholder]="'到达城市'" class="tr ft18"></city-selector>
                 </div>
                 <div class="time-select">
                     <div (click)="openCalendar('go')">
-                        <span class="black-100">出发日期</span>
-                    </div>
-                    <div class="tr" (click)="openCalendar('back')" *ngIf="tripRound">
-                        <span class="black-100">到达日期</span>
+                        <span class="black-100" *ngIf="!timeStemp">出发日期</span>
+                        <span *ngIf="timeStemp">
+                            <font class="black-125 ft18">{{timeStemp | date:'MM月dd日'}}</font>
+                            <font class="blue-100 ft14">{{timeStemp | date:'EEE' | i18nSelect:weeksCn}}</font>
+                        </span>
                     </div>
                 </div>
             </div>
