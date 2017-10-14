@@ -1,4 +1,29 @@
-<!-- Generated template for the TrainComponent component -->
-<div>
-  {{text}}
+<div class="train-panel" ion-fixed>
+    <img src="assets/train-bg.png" alt="" class="train-bg">
+    <div class="panel-list">
+        <div class="train-info">
+            <div class="trip-block">
+                <div class="city-select">
+                    <city-selector [placeholder]="'出发城市'" class="ft18"></city-selector>
+                    <div class="switch">
+                        <span class="iconfont icon-switches-plane-a blue-50"></span>
+                        <span class="iconfont icon-switches-plane-b blue-125"></span>
+                    </div>
+                    <city-selector [placeholder]="'到达城市'" class="tr ft18"></city-selector>
+                </div>
+                <div class="time-select">
+                    <div (click)="openCalendar('go')">
+                        <span class="black-100">出发日期</span>
+                    </div>
+                    <div class="tr" (click)="openCalendar('back')" *ngIf="tripRound">
+                        <span class="black-100">到达日期</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <traveler-add class="mt10"></traveler-add>
+    </div>
+    <div class="button orange mt30">
+        <span>搜索</span>
+    </div>
 </div>

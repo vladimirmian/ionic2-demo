@@ -1,5 +1,6 @@
+import { NavController } from 'ionic-angular';
 import { Component } from '@angular/core';
-
+import { CalendarController } from "ion2-calendar/dist";
 /**
  * Generated class for the TrainComponent component.
  *
@@ -11,12 +12,26 @@ import { Component } from '@angular/core';
   templateUrl: 'train.html'
 })
 export class TrainComponent {
-
-  text: string;
-
-  constructor() {
-    console.log('Hello TrainComponent Component');
-    this.text = 'Hello World';
-  }
+    public timeStemp;
+    constructor(
+        private calendarCtrl: CalendarController,
+        private navCtrl: NavController
+    ) {
+        console.log('Hello HotelComponent Component');
+    }
+    changeCity(e) {
+        console.log(e)
+    }
+    openCalendar() {
+        this.calendarCtrl.openCalendar({
+            cssClass: 'my-class',
+        }).then(_ => {
+            console.log(_);
+            this.timeStemp = _.time;
+        });
+    }
+    search() {
+        this.navCtrl.push('hotellist');
+    }
 
 }

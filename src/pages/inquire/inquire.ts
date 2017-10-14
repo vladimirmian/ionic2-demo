@@ -8,7 +8,7 @@ import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angu
     templateUrl: 'inquire.html',
 })
 export class InquirePage {
-    public appType: string = 'hotel';
+    public appType: string = 'train';
     public PRODUCTTYPE = {
         'inland': "国内机票",
         'interair': "国际机票",

@@ -1,10 +1,14 @@
 {
-    "name": "ionic2-demo",
-    "app_id": "",
-    "type": "ionic-angular",
-    "integrations": {},
-    "proxies": [{
-        "path": "/api",
-        "proxyUrl": "http://localhost:6666"
-    }]
+  "name": "ionic2-demo",
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  },
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "http://localhost:6666"
+    }
+  ]
 }

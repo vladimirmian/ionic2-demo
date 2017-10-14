@@ -1,3 +1,48 @@
+@import './../../global/styles/_var.scss';
 train {
-
+    .train-bg {
+        margin-bottom: -140px;
+    }
+    .panel-list {
+        position: relative;
+        margin: 0 20px;
+        .train-info {
+            .trip-block {
+                padding: 10px;
+                border-radius: 6px;
+                background-color: #fff;
+            }
+            .city-select {
+                display: flex;
+                align-items: center;
+                city-selector {
+                    flex: 3;
+                }
+                >div {
+                    flex: 1;
+                    position: relative;
+                    height: 30px;
+                    span {
+                        position: absolute;
+                        left: 50%;
+                        margin-left: -15px;
+                        font-size: 30px;
+                    }
+                }
+            }
+            .time-select {
+                display: flex;
+                margin-top: 26px;
+                >div {
+                    flex: 1;
+                    width: 100%;
+                    font-size: 16px;
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+    .button {
+        margin-top: 80px;
+    }
 }
